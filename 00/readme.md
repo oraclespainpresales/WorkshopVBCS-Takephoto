@@ -106,10 +106,50 @@ Wait a couple of second to access to your workspace. You should see the *Welcome
   <summary>3.- Creating a Mobile App in Visual Builder.</summary>
   
 ---
-In this section you will create a mobile application with Visual Builder low coding programing. This application will have several components like an API REST connection to Oracle Cloud Object Storage bucket to storage your photos or files, a mobile layout with input fields and button to take the photo, a workflow triggered by the button event handler and more. At the end of the section you will can take a phot with you mobile phone and upload it to an OCI Object Stogare bucket.
+In this section you will create a mobile application with Visual Builder low coding programing. This application will have several components like an API REST connection to Oracle Cloud Object Storage bucket to storage your photos or files, a mobile layout with input fields and button to take the photo, a workflow triggered by the button event handler and more. At the end of the section you will can take a photo with you mobile phone and upload it to an OCI Object Stogare bucket.
  
 ---
   
 ## Creating a Mobile App in Visual Builder.
+In Visual Builder you can create web applications as well as mobile applications. As a low coding programing platform you have a lot of preconfigured UI components to create an application layout for you business case. But you can use javascript (nodejs notation) if you want to have more control over your application. The limit is your imagination.
+  
+Click in the mobile left menu icon and then click **+ Mobile Application** button to create a mobile application.
+  
+![](./images/vbs-app-01.png)
+  
+In *General Information* you must to write a descriptive name for your mobile app, like **takephotoapp**. Then select none as mobile layout app, because in this workshop we won't create a navigation menu for the app as it has only one screen. Finally click **Next** button to continue.
+  
+![](./images/vbs-app-02.png)
+  
+Keep **Custom** layout selected (empty layout) and click **Create** button to create you mobile app.
+  
+![](./images/vbs-app-03.png)
+
+Now you should have created the visual builder mobile application environtment/sandbox to continue creating your mobile app. You should see the *Page Designer* selected with a simple mobile layout in the main window.
+  
+![](./images/vbs-app-04.png)
+  
+You can change the mobile appearance (iphone, google pixel, samsung or tablet), show or hide the bezel or change the mobiile size. In the tutorial we select Samsung Galaxy S20 layout, but you can select whatever you want (default layout is for iphone mobile phones).
+  
+![](./images/vbs-app-05.png)
+  
+Click in **Page Title** to select the *Mobile Page Template* properties. Then change the page title to a descriptive one like **Take a Photo to OCI App**
+  
+![](./images/vbs-app-06.png)
+  
+Select **Flex Container** layout to change it.
+  
+![](./images/vbs-app-07.png)
+  
+Change the *Display Settings* to **Grid** layout.
+  
+![](./images/vbs-app-08.png)
+  
+Drag and Drop an **Input Text** component to the mobile grid layout.
+  
+![](./images/vbs-app-09.gif)
+  
+
+
   
 </details>
