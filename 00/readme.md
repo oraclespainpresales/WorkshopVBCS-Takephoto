@@ -125,7 +125,7 @@ Keep **Custom** layout selected (empty layout) and click **Create** button to cr
   
 ![](./images/vbs-app-03.png)
 
-Now you should have created the visual builder mobile application environtment/sandbox to continue creating your mobile app. You should see the *Page Designer* selected with a simple mobile layout in the main window.
+Now you should have created the visual builder mobile application environtment/sandbox to continue creating your mobile app. You should see the *Page Designer* selected with a simple mobile layout in the Design window.
   
 ![](./images/vbs-app-04.png)
   
@@ -149,11 +149,11 @@ Scroll down in the Components menu to Layout and darg and drop **Form Layout** t
   
 ![](./images/vbs-app-09.gif)
   
-Drag and Drop an **Input Text** component to the mobile grid layout.
+Scroll up or search an **Input Text** component and drag and drop to the Design window, inside the *Form Layout*.
   
 ![](./images/vbs-app-10.gif)
   
-Now you will create other **Input Text** but dragging and drop in the Structure menu, instead of drag and drop over the mobile layout. Drag and Drop over the Structure menu gives you more control creating the mobile layout.
+Now you will create other **Input Text** but dragging and drop in the Structure menu, instead of drag and drop over Design window. Drag and Drop over the Structure menu gives you more control when you are creating the mobile layout.
   
 ![](./images/vbs-app-11.gif)
 
