@@ -172,7 +172,7 @@ Now you have to scroll down and add an **If** component from *Layout* menu to th
   
 ![](./images/vbs-app-13.gif)
   
-Add other **If** component more to the *Structure tree*, but this time you have to add it inside the last *If* that you created before.
+Add other **If** component more to the *Structure tree*, but this time you have to add it inside (nested) the last *If* that you created before.
 > Note: You have to create two nested if components, one for each **Input Text** added before.
 
 ![](./images/vbs-app-14.gif)
