@@ -101,3 +101,15 @@ Wait a couple of second to access to your workspace. You should see the *Welcome
 ![](./images/oci-vbs-05.png)
     
 </details>
+</details>
+<details>
+  <summary>3.- Creating a Mobile App in Visual Builder.</summary>
+  
+---
+In this section you will create a mobile application with Visual Builder low coding programing. This application will have several components like an API REST connection to Oracle Cloud Object Storage bucket to storage your photos or files, a mobile layout with input fields and button to take the photo, a workflow triggered by the button event handler and more. At the end of the section you will can take a phot with you mobile phone and upload it to an OCI Object Stogare bucket.
+ 
+---
+  
+## Creating a Mobile App in Visual Builder.
+  
+</details>
