@@ -1,7 +1,8 @@
 # Visual Builder workshop.
 This workshop will teach you how to create a new Oracle Visual Builder mobile application, that will allow you to take a photo with the mobile camera and upload it to Oracle Cloud (OCI) Object Storage.
 
-## Creating the API Key
+<details>
+  <summary>## Creating the API Key</summary>
 You will have to connecto the Visual Builder app to OCI Object Storage Bucket to Store the mobile photo or image files. You must create an API key OCI element to access to the OCI Services via API REST. Let's create the API Key.
 
 First Sign in [OCI web console](https://cloud.oracle.com) with your credentials (Note: this credentials will be provided to you in the workshop by the trainers, or you can use youw own credentials if you have a trial or paid tenancy).
@@ -60,4 +61,4 @@ You might have a new API key created and you should see the Fingerprint key in t
 You can get the Config file that you copied before clicking in the *tree vertical* dots in the Fingerprint row and select **View Config File**.
 
 ![](./images/oci-apikey-10.png)
-
+</details>
