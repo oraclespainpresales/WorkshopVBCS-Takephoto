@@ -68,3 +68,13 @@ You can get the Config file that you copied before clicking in the *tree vertica
 
 ![](./images/oci-apikey-10.png)
 </details>
+<details>
+  <summary>2.- Acessing VBCS and WorkSpace</summary>
+  
+---
+  To develop your Visual Builder Application you must access to the workshop Visual Builder Studio instance. Visual Builder is not only used to develop Visual Builder applications, but it allows the development of any kind of modern application thanks to its multitude of integrated development tools, such as a GIT, CI/CD pipelines engine, artifact generation, container repository, agile tools, wiki, snipples and more. If you want to know more please click [here](https://www.oracle.com/application-development/visual-builder-studio/)
+ 
+---
+  
+
+</details>
