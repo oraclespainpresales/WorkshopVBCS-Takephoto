@@ -115,6 +115,7 @@ In Visual Builder you can create web applications as well as mobile applications
 
 <details>
   <summary>3.1 Creating the mobile layout</summary>
+  
 ### Creating the mobile layout.
 Now you will create the mobile layout adding several components that you will use and combine in future sections to create the mobile application.
   
