@@ -3,6 +3,7 @@ This workshop will teach you how to create a new Oracle Visual Builder mobile ap
 
 <details>
   <summary>1.- Creating the API Key.</summary>
+  
 ## Creating the API Key
 You will have to connecto the Visual Builder app to OCI Object Storage Bucket to Store the mobile photo or image files. You must create an API key OCI element to access to the OCI Services via API REST. Let's create the API Key.
 
