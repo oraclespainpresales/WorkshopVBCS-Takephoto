@@ -85,7 +85,7 @@ Next you have to click in the VBS instance **menu icon** and click in the **Acce
   
 ![](./images/oci-vbs-02.png)  
  
-Then in Organization, select the Project that you will use for this workshop that is **Workshop-VBCS-Takephoto**
+Then in **Organization**, select the *Project* -> **Workshop-VBCS-Takephoto** that you will use for this workshop. 
   
 ![](./images/oci-vbs-03.png)
   
