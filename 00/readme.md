@@ -77,7 +77,7 @@ You can get the Config file that you copied before clicking in the *tree vertica
 ---
   
 ## Acessing Visual Builder Studio and WorkSpace using Visual Builder Cloud Service
-To get access to Visual Builder Studio (VBS) you have to Sign-in Oracle Cloud web console with your tenancy user credentials. Then Click in the *hambuerguer icon* in the top left part of the web console and select **OCI Classic Services** then click in **Developer** to access to Visual Builder Studio instance.
+To get access to Visual Builder Studio (VBS) you have to Sign-in Oracle Cloud web console with your tenancy user credentials. Then Click in the *hamburguer icon* in the top left part of the web console and select **OCI Classic Services** then click in **Developer** to access to Visual Builder Studio instance.
 
 ![](./images/oci-vbs-01.png)
   
