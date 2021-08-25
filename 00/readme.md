@@ -145,11 +145,17 @@ Change the *Display Settings* to **Grid** layout.
   
 ![](./images/vbs-app-08.png)
   
-Drag and Drop an **Input Text** component to the mobile grid layout.
+Scroll down in the Components menu to Layout and darg and drop **Form Layout** to the Design window.
   
 ![](./images/vbs-app-09.gif)
   
-
+Drag and Drop an **Input Text** component to the mobile grid layout.
+  
+![](./images/vbs-app-10.gif)
+  
+Now you will create other **Input Text** but dragging and drop in the Structure menu, instead of drag and drop over the mobile layout. Drag and Drop over the Structure menu gives you more control creating the mobile layout.
+  
+![](./images/vbs-app-11.gif)
 
   
 </details>
