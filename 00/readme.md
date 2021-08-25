@@ -195,13 +195,13 @@ Last Layout component will be an **Image** one. Drag the **Image** component fro
   
 ![](./images/vbs-app-18.gif)
 
-Now you should have a Structure tree similar the next screenshot. You can move components in the structure tree if your layout structure is different.
+Now you should have a Structure tree similar to the next screenshot. You can move components in the Structure tree if your layout structure is different.
   
 ![](./images/vbs-app-19.png)
   
 </details>
 <details>
-  <summary>3.1 Configuring the components created</summary>
+  <summary>3.2 Configuring the components created</summary>
   
   
 </details>
