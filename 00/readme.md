@@ -177,8 +177,8 @@ Add other **If** component more to the *Structure tree*, but this time you have 
 
 ![](./images/vbs-app-14.gif)
   
-Next you have to add a **Grid Container** component from *Layout* menu, nested to the last *if* component in the *Structure* tree. 
-> Note: The Grid Container (show as Grid Row in the Structure tree) will contain the next components that you have to crete and you'll use it to show or hide its content according to the match rules that you will create in the *If* components in future steps.
+Next you have to add a **Grid Container** component from *Layout* menu, nested to the last *if* component in the *Structure* tree. Drag the **Grid Container** component and drop it inside the last **Bind If**.
+> Note: The Grid Container (show as *Grid Row* in the Structure tree) will contain the next components that you have to crete and you'll use it to show or hide its content according to the match rules that you will create in the *If* components in future steps.
   
 ![](./images/vbs-app-15.png)
   
