@@ -113,6 +113,8 @@ In this section you will create a mobile application with Visual Builder low cod
 ## Creating a Mobile App in Visual Builder.
 In Visual Builder you can create web applications as well as mobile applications. As a low coding programing platform you have a lot of preconfigured UI components to create an application layout for you business case. But you can use javascript (nodejs notation) if you want to have more control over your application. The limit is your imagination.
 
+<details>
+  <summary>3.1 Creating the mobile layout</summary>
 ### Creating the mobile layout.
 Now you will create the mobile layout adding several components that you will use and combine in future sections to create the mobile application.
   
@@ -160,5 +162,5 @@ Now you will create other **Input Text** but dragging and drop in the Structure 
   
 ![](./images/vbs-app-11.gif)
 
-  
+</details>
 </details>
