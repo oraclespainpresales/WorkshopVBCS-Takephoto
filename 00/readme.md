@@ -162,6 +162,47 @@ Scroll up or search an **Input Text** component and drag and drop to the Design 
 Now you will create other **Input Text** but dragging and drop in the Structure menu, instead of drag and drop over Design window. Drag and Drop over the Structure menu gives you more control when you are creating the mobile layout.
   
 ![](./images/vbs-app-11.gif)
+  
+Next you will add a **Horizontal Rule** from *Layout* components to the Design window.
+  
+![](./images/vbs-app-12.png)
+  
+Now you have to scroll down and add an **If** component from *Layout* menu to the Structure tree. 
+> Note: This component will allow you to compose match rules to create different behaviours according to that rules. In this workshop you will use the **If** component to show or hide the *take photo button*, that you'll have to add to the Design window in next steps.
+  
+![](./images/vbs-app-13.gif)
+  
+Add other **If** component more to the *Structure tree*, but this time you have to add it inside the last *If* that you created before.
+> Note: You have to create two nested if components, one for each **Input Text** added before.
 
+![](./images/vbs-app-14.gif)
+  
+Next you have to add a **Grid Container** component from *Layout* menu, nested to the last *if* component in the *Structure* tree. 
+> Note: The Grid Container (show as Grid Row in the Structure tree) will contain the next components that you have to crete and you'll use it to show or hide its content according to the match rules that you will create in the *If* components in future steps.
+  
+![](./images/vbs-app-15.png)
+  
+Now you have to add a **Camera** Component from *Commom* menu, nested to the Grid Row that you create in the last step.
+> Note: The Camera component is made up of three components: a **File Picker** and a **Button** with an **Icon**. The File Picker component will have a special behaviour as the action that it will execute, will be triggered by the button instead of the own File Picker component.
+  
+![](./images/vbs-app-16.gif)
+  
+Next add other **Horizontal Rule** component from *Layout* components menu as a separator. You must drag the **Horizontal Rule** and drop inside the **Camera** component in the *Structure* tree.
+  
+![](./images/vbs-app-17.gif)
+  
+Last Layout component will be an **Image** one. Drag the **Image** component from the *Common* components menu and Drop inside the **Grid Row**. **Image** component should be at the same level as the **Camera** component.
+  
+![](./images/vbs-app-18.gif)
+
+Now you should have a Structure tree similar the next screenshot. You can move components in the structure tree if your layout structure is different.
+  
+![](./images/vbs-app-19.png)
+  
+</details>
+<details>
+  <summary>3.1 Configuring the components created</summary>
+  
+  
 </details>
 </details>
