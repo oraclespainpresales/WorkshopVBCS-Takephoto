@@ -212,7 +212,10 @@ In this section you'll configure the components to improve the UI and user exper
 ## Configuring the components created.
 Now that you have created the mobile app UI layout, you have to configure the different components. Let's configure the components!!
 
-The photo name will be the join of the first Input Text field (User Name), the second Input Text field (Photo Name) and a random number that the phone use when you take a photo with the camera. The result should be something similar to **[userXX-photoXX-0934750743058743095.jpg]**.
+The photo name will be the join of the first Input Text field (User Name), the second Input Text field (Photo Name) and a random number that the phone use when you take a photo with the camera. The result should be something similar to 
+```sh  
+userXX-photoXX-0934750743058743095.jpg
+```
   
 Click in the first *Text Input* component to get access the **General** component fields. This component will be used to storage the user name that will take the photo. 
   
