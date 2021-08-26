@@ -326,7 +326,7 @@ Replace the **[[true]]** value directly with
 
 ![](./images/vbs-app-visibility-12.png)  
   
-As you have noticed, you could create only one **Bind-If** component surrounding the *Grid Row* and write a condition similar to:
+As you have noticed, you could have created only one **Bind-If** component surrounding the *Grid Row* and write a condition similar to:
 ```
   [[ $variables.userName && $variables.photoName ]]
 ```
