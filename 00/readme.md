@@ -247,6 +247,97 @@ Click in the *Image* component and put in the **Width** field the first number o
   
 ![](./images/vbs-app-config-06.png)  
 </details>
+<details>
+  <summary>3.3 Manage Component Visibility Using Conditions and Variables</summary>
 
+--- 
+  
+You can use a **bind-if** component to conditionally show or hide UI components in your visual application. Use **bind-if** to surround other components and set conditions to determine whether the components should be displayed on a page. In this lab you'll configure two **bind-if** components, one for each *Input Text* value. To manage the value of the **Input Text** components you'll have to create variables. These variables will be used in the events and actions to those events in future steps.
+  
+> Note: For academic reasons and to facilitate the creation of the mobile UI, the **bind-if** components were created before adding the components affected by them. To use an **bind-if** component to control when a component is displayed in a page after you added it: In **Design** mode, locate the component that you want to control dynamically. *Right-click* the component on the canvas or in the *Structure* view and select **Surround > If** in the popup menu. 
+  
+![](./images/vbs-app-surround-01.png)  
+  
+---
+  
+### Manage Component Visibility Using Conditions and Variables
+Before the **Bind-If** configuration, you'll have to create several variables to store the *Input Text* value. Let's create the variables and then you'll can create the rules to control de visibility of the components.
+  
+Click **Variables** in the main-start tab to get access to the variables configuration window. You shouldn't have any variable created yet. Click **+ Variable** to create the first variable for you main-start page.
+  
+![](./images/vbs-app-visibility-01.png)  
+  
+Write a variable name like **userName** in the *ID* field and keep **String** as variable *Type*. Then Click **Create & New** to save and create the second variable.
+  
+![](./images/vbs-app-visibility-02.png)
+  
+Repeat the last step and write a variable name like **photoName** in the *ID* field and keep **String** as variable *Type*. This time click in **Create** button as you don't have to create other variable right now.
+  
+![](./images/vbs-app-visibility-03.png)
+  
+Now you have to link this two variables with each **Input Text** components. Click in **Page Designer** again to return the design window and Select the *User Name* **Input Text** but **Data** tab properties instead of General one.
+  
+![](./images/vbs-app-visibility-04.png)
+  
+Then hover the mouse in the Value field and click **fx** (Expression Editor) icon.
+  
+![](./images/vbs-app-visibility-05.png)
+  
+The Expression Editor window should appear. Then Drag **userName** variable and Drop in the first line. Click **Save** button to finish the linking process.
+  
+![](./images/vbs-app-visibility-06.gif)
+  
+Repeat the lasta step with the **Photo Name** component.
+  
+![](./images/vbs-app-visibility-07.gif)
+  
+Now you have linked the variables with the components values and you will can use them in several parts of your mobile application. For example you will use them in the next steps to modify the visibility of the Camera and Image components.
+  
+To modify the visibility you have to use the **Bind-If** components. Click in the **Structure** tree and select the first *Bind-If*. As you can see in the *Properties*, there is a Test field with **[[true]]** value. This value means that the if is always true. Let's change the value to modify the visibility dinamically. Then click in the **fx** icon to open the Expression Editor window.
+  
+![](./images/vbs-app-visibility-08.png)
+  
+In the Expresiion Editor paste next condition.
+```
+  $variables.userName != ""
+```
+Then click **Save** Button.
+  
+![](./images/vbs-app-visibility-09.png)
+  
+Now in the **Test** you should see a value of
+```
+  [[ $variables.userName != "" ]]
+```
+  
+![](./images/vbs-app-visibility-10.png)
+  
+For simple conditions you can create expresions with **[[]]** in the Test field without using the Expression Editor window. To test it you can create the condition for the *Photo Name* **Input Text** component. Click in the second **Bind-If** component in the *Structure* tree.
+  
+![](./images/vbs-app-visibility-11.png)  
+  
+Replace the **[[true]]** value with
+```
+  [[ $variables.photoName != "" ]]
+```
+
+![](./images/vbs-app-visibility-12.png)  
+  
+As you notice, you could create only one **Bind-If** components surrounding the *Grid Row* and write a condition similar to:
+```
+  [[ $variables.photoName != "" && $variables.userName != "" ]]
+```
+But again, for academical reasons we create two **bind-if** to show you the different ways to use the Expresion Editor and the Test Field directly.
+You will notice too that the **Bind-if** components have a **Temporary Override** value that let you test the visibility changing the temporary value to true or false.
+  
+![](./images/vbs-app-visibility-13.png)  
+  
+If you change the Temporary Override Value to **False** in one of the *Bind-if* components you can see how the surrounded **Grid Row** and its children (in the structure tree) will be hidden in the Design window. After the test please don't forget to switch the Temporary Override to **Off** value to avoid issues.
+  
+![](./images/vbs-app-visibility-14.png)  
+  
+Why doesn't the **binf-if** component work right now? Because you must to create an event in each **Text Input** to store the value (when it change) in the appropiate variable. You can practice this process in next Sections.
+  
+</details>  
   
 </details>
