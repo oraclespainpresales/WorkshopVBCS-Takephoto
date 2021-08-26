@@ -2,7 +2,7 @@
 This workshop will teach you how to create a new Oracle Visual Builder mobile application, that will allow you to take a photo with the mobile camera and upload it to Oracle Cloud (OCI) Object Storage.
 
 <details>
-  <summary>1.- Creating the API Key.</summary>
+  <summary>1.- Creating the API Key. (click to show)</summary>
 
 ---
 You will have to connecto the Visual Builder app to OCI Object Storage Bucket to Store the mobile photo or image files. You must create an API key OCI element to access to the OCI Services via API REST. Let's create the API Key.
@@ -69,7 +69,7 @@ You can get the Config file that you copied before clicking in the *tree vertica
 ![](./images/oci-apikey-10.png)
 </details>
 <details>
-  <summary>2.- Acessing Visual Builder Studio and WorkSpace using Visual Builder Cloud Service</summary>
+  <summary>2.- Acessing Visual Builder Studio and WorkSpace using Visual Builder Cloud Service (click to show)</summary>
   
 ---
   To develop your Visual Builder Application you must access to the workshop Visual Builder Studio instance. Visual Builder is not only used to develop Visual Builder applications, but it allows the development of any kind of modern application thanks to its multitude of integrated development tools, such as a GIT repository, CI/CD pipelines engine, artifact generation, container repository, agile tools, team building tools like wiki and snipples and more. If you want to know more please click [here](https://www.oracle.com/application-development/visual-builder-studio/)
@@ -103,7 +103,7 @@ Wait a couple of second to access to your workspace. You should see the *Welcome
 </details>
 </details>
 <details>
-  <summary>3.- Creating a Mobile App in Visual Builder.</summary>
+  <summary>3.- Creating a Mobile App in Visual Builder (click to show)</summary>
   
 ---
 In this section you will create a mobile application with Visual Builder low coding programing. This application will have several components like an API REST connection to Oracle Cloud Object Storage bucket to storage your photos or files, a mobile layout with input fields and button to take the photo, a workflow triggered by the button event handler and more. At the end of the section you will can take a photo with you mobile phone and upload it to an OCI Object Stogare bucket.
@@ -114,7 +114,7 @@ In this section you will create a mobile application with Visual Builder low cod
 In Visual Builder you can create web applications as well as mobile applications. As a low coding programing platform you have a lot of preconfigured UI components to create an application layout for you business case. But you can use javascript (nodejs notation) if you want to have more control over your application. The limit is your imagination.
 
 <details>
-  <summary>3.1 Creating the mobile layout</summary>
+  <summary>3.1 Creating the mobile layout (click to show)</summary>
   
 ### Creating the mobile layout.
 Now you will create the mobile layout adding several components that you will use and combine in future sections to create the mobile application.
@@ -201,7 +201,7 @@ Now you should have a Structure tree similar to the next screenshot. You can mov
   
 </details>
 <details>
-  <summary>3.2 Configuring the components created</summary>
+  <summary>3.2 Configuring the components created (click to show)</summary>
   
   
 </details>
