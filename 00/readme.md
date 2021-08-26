@@ -230,18 +230,20 @@ Now click in the *Camera* component and in the General tab deselect **Video** ch
 
 ![](./images/vbs-app-config-04.png)
   
-Then click in the *Button* component inside the Camera one. Change the Text field deleting the **/Video** part. Then Select **Call to Action** in the Choming field and check *Full width* in Styling.
-  
-  
+Then click in the *Button* component inside the Camera one. Change the Text field deleting the **/Video** part. Then Select **Call to Action** in the Choming field and check *Full width* in Styling. 
   
 |Field|Value|  
 |-|-|
 |Text|Take a Photo|
 |Chroming|Call To Action|
-|Styling| - [x] Full Width|
+|Styling| Full Width |
   
 ![](./images/vbs-app-config-05.png)
 
-
+Click in the *Image* component and put in the **Width** field the first number of pixels located in the Viewport Resolution (for Samsung Galaxy S20 is **360** pixels).
+  
+![](./images/vbs-app-config-06.png)  
 </details>
+
+  
 </details>
