@@ -275,7 +275,7 @@ Repeat the last step and write a variable name like **photoName** in the *ID* fi
   
 ![](./images/vbs-app-visibility-03.png)
   
-Now you have to link this two variables with each **Input Text** components. Click in **Page Designer** again to return the design window and Select the *User Name* **Input Text** but **Data** tab properties instead of General one.
+Now you have to link this two variables with each **Input Text** components. Click in **Page Designer** again to return to the Design window and Select the *User Name* **Input Text** but **Data** tab properties instead of General one.
   
 ![](./images/vbs-app-visibility-04.png)
   
@@ -293,11 +293,11 @@ Repeat the lasta step with the **Photo Name** component.
   
 Now you have linked the variables with the components values and you will can use them in several parts of your mobile application. For example you will use them in the next steps to modify the visibility of the Camera and Image components.
   
-To modify the visibility you have to use the **Bind-If** components. Click in the **Structure** tree and select the first *Bind-If*. As you can see in the *Properties*, there is a Test field with **[[true]]** value. This value means that the if is always true. Let's change the value to modify the visibility dinamically. Then click in the **fx** icon to open the Expression Editor window.
+To modify the visibility you have to use the **Bind-If** components. Click in the **Structure** tree and select the first *Bind-If*. As you can see in the *Properties*, there is a Test field with **[[true]]** value. This value means that the if value is always *true*. Let's change the value to modify the visibility dinamically. Then click in the **fx** icon to open the Expression Editor window.
   
 ![](./images/vbs-app-visibility-08.png)
   
-In the Expresiion Editor paste next condition.
+In the Expresion Editor, you could drag and drop any value in the left tree, but to make the process easy, you must to delete the *true* value and paste the next condition.
 ```
   $variables.userName != ""
 ```
@@ -305,25 +305,25 @@ Then click **Save** Button.
   
 ![](./images/vbs-app-visibility-09.png)
   
-Now in the **Test** you should see a value of
+Now in the **Test** field, you should see a value of
 ```
   [[ $variables.userName != "" ]]
 ```
   
 ![](./images/vbs-app-visibility-10.png)
   
-For simple conditions you can create expresions with **[[]]** in the Test field without using the Expression Editor window. To test it you can create the condition for the *Photo Name* **Input Text** component. Click in the second **Bind-If** component in the *Structure* tree.
+For simple conditions you can create expresions with **[[]]** directly in the Test field without using the Expression Editor window. To test it you can create the condition for the *Photo Name* **Input Text** component in the second **Bind-If**. Click in the second **Bind-If** component in the *Structure* tree.
   
 ![](./images/vbs-app-visibility-11.png)  
   
-Replace the **[[true]]** value with
+Replace the **[[true]]** value directly with
 ```
   [[ $variables.photoName != "" ]]
 ```
 
 ![](./images/vbs-app-visibility-12.png)  
   
-As you ahve noticed, you could create only one **Bind-If** component surrounding the *Grid Row* and write a condition similar to:
+As you have noticed, you could create only one **Bind-If** component surrounding the *Grid Row* and write a condition similar to:
 ```
   [[ $variables.photoName != "" && $variables.userName != "" ]]
 ```
@@ -334,10 +334,18 @@ You will notice too that the **Bind-if** components have a **Temporary Override*
   
 If you change the Temporary Override Value to **False** in one of the *Bind-if* components you can see how the surrounded **Grid Row** and its children (in the structure tree) will be hidden in the Design window. After testing it, please you don't forget to switch the Temporary Override to **Off** value to avoid issues.
   
-![](./images/vbs-app-visibility-14.png)  
+![](./images/vbs-app-visibility-14.gif)  
   
 Why doesn't the **binf-if** component work right now? Because you must to create an event in each **Text Input** to store the value (when it change) in the linked variable. You'll can practice this creation process in next Sections.
   
 </details>  
+<details>
+  <summary>3.4 Create the API REST Service Connector</summary>
+
+--- 
+    
+---
   
+### Create the API REST Service Connector
+  </details>
 </details>
