@@ -289,7 +289,7 @@ The Expression Editor window should appear. Then Drag **userName** variable and 
   
 ![](./images/vbs-app-visibility-06.gif)
   
-Repeat the lasta step with the **Photo Name** component.
+Repeat the last step with the **Photo Name** component.
   
 ![](./images/vbs-app-visibility-07.gif)
   
