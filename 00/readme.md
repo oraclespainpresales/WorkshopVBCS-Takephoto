@@ -1,7 +1,7 @@
 # Visual Builder workshop.
 This workshop will teach you how to create a new Oracle Visual Builder mobile application, that will allow you to take a photo with the mobile camera and upload it to Oracle Cloud (OCI) Object Storage.
 
-You have a detailed manual about Visual Builder [here](https://docs.oracle.com/en/cloud/paas/app-builder-cloud/visual-builder-developer/design-pages.html#GUID-235B24C5-AE09-4B62-8368-BDF21B8F95FF)
+You have a detailed manual about Visual Builder [here](https://docs.oracle.com/en/cloud/paas/app-builder-cloud/visual-builder-developer/index.html)
 
 <details>
   <summary>1.- Creating the OCI API Key (click to show)</summary>
