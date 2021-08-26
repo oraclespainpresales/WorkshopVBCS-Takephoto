@@ -323,20 +323,20 @@ Replace the **[[true]]** value with
 
 ![](./images/vbs-app-visibility-12.png)  
   
-As you notice, you could create only one **Bind-If** components surrounding the *Grid Row* and write a condition similar to:
+As you ahve noticed, you could create only one **Bind-If** component surrounding the *Grid Row* and write a condition similar to:
 ```
   [[ $variables.photoName != "" && $variables.userName != "" ]]
 ```
 But again, for academical reasons we create two **bind-if** to show you the different ways to use the Expresion Editor and the Test Field directly.
-You will notice too that the **Bind-if** components have a **Temporary Override** value that let you test the visibility changing the temporary value to true or false.
+You will notice too that the **Bind-if** components have a **Temporary Override** value that let you test the visibility changing a temporary value of true or false.
   
 ![](./images/vbs-app-visibility-13.png)  
   
-If you change the Temporary Override Value to **False** in one of the *Bind-if* components you can see how the surrounded **Grid Row** and its children (in the structure tree) will be hidden in the Design window. After the test please don't forget to switch the Temporary Override to **Off** value to avoid issues.
+If you change the Temporary Override Value to **False** in one of the *Bind-if* components you can see how the surrounded **Grid Row** and its children (in the structure tree) will be hidden in the Design window. After testing it, please you don't forget to switch the Temporary Override to **Off** value to avoid issues.
   
 ![](./images/vbs-app-visibility-14.png)  
   
-Why doesn't the **binf-if** component work right now? Because you must to create an event in each **Text Input** to store the value (when it change) in the appropiate variable. You can practice this process in next Sections.
+Why doesn't the **binf-if** component work right now? Because you must to create an event in each **Text Input** to store the value (when it change) in the linked variable. You'll can practice this creation process in next Sections.
   
 </details>  
   
