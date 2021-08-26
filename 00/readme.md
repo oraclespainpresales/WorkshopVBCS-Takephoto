@@ -235,7 +235,7 @@ Then click in the *Button* component inside the Camera one. Change the Text fiel
 |-|-|
 |Text|Take a Photo|
 |Chroming|Call To Action|
-|Styling|[X]Full Width|
+|Styling| [x] Full Width|
   
 ![](./images/vbs-app-config-05.png)
 
