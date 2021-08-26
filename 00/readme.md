@@ -340,12 +340,21 @@ Why doesn't the **binf-if** component work right now? Because you must to create
   
 </details>  
 <details>
-  <summary>3.4 Create the API REST Service Connector</summary>
+  <summary>3.4 Creating the API REST Service Connector</summary>
 
 --- 
     
 ---
   
-### Create the API REST Service Connector
+### Creating the API REST Service Connector
+  </details>
+<details>
+  <summary>3.5 Component Events & Actions</summary>
+
+--- 
+    
+---
+  
+### Component Events & Actions
   </details>
 </details>
