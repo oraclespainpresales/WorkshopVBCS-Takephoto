@@ -203,6 +203,42 @@ Now you should have a Structure tree similar to the next screenshot. You can mov
 <details>
   <summary>3.2 Configuring the components created (click to show)</summary>
   
+---
   
+In this section you'll configure the components to improve the UI and user experience. For example you'll use the **If** components to show or hide the camera button and the image components.
+
+---
+  
+## Configuring the components created.
+Now that you have created the mobile app UI layout, you have to configure the different components. Let's configure the components!!
+
+The photo name will be the join of the first Input Text field (User Name), the second Input Text field (Photo Name) and a random number that the phone use when you take a photo with the camera. The result should be something similar to **[userXX-photoXX-0934750743058743095.jpg]**.
+  
+Click in the first *Text Input* component to get access the **General** component fields. This component will be used to storage the user name that will take the photo. 
+  
+![](./images/vbs-app-config-01.png)
+  
+In the **Label Hint** write *User Name* and keep rest of the fields as default.
+  
+![](./images/vbs-app-config-02.png)
+
+Repeat the same steps to put **Photo Name** in the second *Input Text* field. 
+
+![](./images/vbs-app-config-03.png)
+
+Now click in the *Camera* component and in the General tab deselect **Video** check, as you have to take only photos. 
+
+![](./images/vbs-app-config-04.png)
+  
+Then click in the *Button* component inside the Camera one. Change the Text field deleting the **/Video** part. Then Select **Call to Action** in the Choming field and check *Full width* in Styling.
+|Field|Value|  
+|-|-|
+|Text|Take a Photo|
+|Chroming|Call To Action|
+|Styling|[x]Full Width|
+  
+![](./images/vbs-app-config-05.png)
+
+
 </details>
 </details>
