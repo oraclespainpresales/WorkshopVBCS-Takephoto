@@ -2,7 +2,7 @@
 This workshop will teach you how to create a new Oracle Visual Builder mobile application, that will allow you to take a photo with the mobile camera and upload it to Oracle Cloud (OCI) Object Storage.
 
 <details>
-  <summary>1.- Creating the OCI API Key. (click to show)</summary>
+  <summary>1.- Creating the OCI API Key (click to show)</summary>
 
 ---
 You will have to connect the Visual Builder app to OCI Object Storage Bucket to Store the mobile photos or image files in a bucket. You must create an OCI API Key to get access to the OCI Services via API REST. So let's create the API Key.
@@ -248,7 +248,7 @@ Click in the *Image* component and put in the **Width** field the first number o
 ![](./images/vbs-app-config-06.png)  
 </details>
 <details>
-  <summary>3.3 Manage Component Visibility Using Conditions and Variables</summary>
+  <summary>3.3 Manage Component Visibility Using Conditions and Variables (click to show)</summary>
 
 --- 
   
@@ -340,7 +340,7 @@ Why doesn't the **binf-if** component work right now? Because you must to create
   
 </details>  
 <details>
-  <summary>3.4 Creating the API REST Service Connector</summary>
+  <summary>3.4 Creating the API REST Service Connector (click to show)</summary>
 
 --- 
     
@@ -349,7 +349,7 @@ Why doesn't the **binf-if** component work right now? Because you must to create
 ### Creating the API REST Service Connector
   </details>
 <details>
-  <summary>3.5 Component Events & Actions</summary>
+  <summary>3.5 Component Events & Actions (click to show)</summary>
 
 --- 
     
