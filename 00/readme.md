@@ -335,7 +335,7 @@ You will notice too that the **Bind-if** components have a **Temporary Override*
   
 ![](./images/vbs-app-visibility-13.png)  
   
-If you change the Temporary Override Value to **True** in both **Bind-If** components, you can see how the surrounded **Grid Row** and its children (in the structure tree) will be shown in the Design window. After testing it, please you don't forget to switch the Temporary Override to **Off** value to avoid issues. Anyway you will be advice with a orange sign that you **Bind-If** components are overridden.
+If you change the Temporary Override Value to **True** in both **Bind-If** components, you can see how the surrounded **Grid Row** and its children (in the structure tree) will be shown in the Design window. After testing it, please you don't forget to switch the Temporary Override to **Off** value to avoid issues. Anyway you will be advice with an orange mark that your **Bind-If** components are overridden.
   
 ![](./images/vbs-app-visibility-14.gif)  
   
