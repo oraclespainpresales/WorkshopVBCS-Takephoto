@@ -229,7 +229,7 @@ Repeat the same steps to put **Photo Name** in the second *Input Text* field.
 
 ![](./images/vbs-app-config-03.png)
 
-Now click in the *Camera* component and in the General tab deselect **Video** check, as you have to take only photos. 
+Now click in the *Camera* component and in the General tab deselect **Video** check, as you'll have to take photos only. 
 
 ![](./images/vbs-app-config-04.png)
   
