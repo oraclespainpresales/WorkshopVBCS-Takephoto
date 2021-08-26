@@ -297,46 +297,45 @@ To modify the visibility you have to use the **Bind-If** components. Click in th
   
 ![](./images/vbs-app-visibility-08.png)
   
-In the Expresion Editor, you could drag and drop any value in the left tree, but to make the process easy, you must to delete the *true* value and paste the next condition.
+In the Expresion Editor, you could drag and drop any value in the left tree, you must to delete the *true* value before drag and drop the variable:
 ```
-  $variables.userName != ""
+  $variables.userName
 ```
 Then click **Save** Button.
   
-![](./images/vbs-app-visibility-09.png)
+![](./images/vbs-app-visibility-09.gif)
   
 Now in the **Test** field, you should see a value of
 ```
-  [[ $variables.userName != "" ]]
+  [[ $variables.userName ]]
 ```
+And the **Grid Row** component and its children should be hidden as the *User Name* value is empty and the condition value is equivalent to *False* value.
   
 ![](./images/vbs-app-visibility-10.png)
   
-For simple conditions you can create expresions with **[[]]** directly in the Test field without using the Expression Editor window. To test it you can create the condition for the *Photo Name* **Input Text** component in the second **Bind-If**. Click in the second **Bind-If** component in the *Structure* tree.
+For simple conditional expresions you can create them with **[[]]** directly in the Test field without using the Expression Editor window. To test it you can create the condition for the *Photo Name* **Input Text** component in the second **Bind-If**. Click in the second **Bind-If** component in the *Structure* tree.
   
 ![](./images/vbs-app-visibility-11.png)  
   
 Replace the **[[true]]** value directly with
 ```
-  [[ $variables.photoName != "" ]]
+  [[ $variables.photoName ]]
 ```
 
 ![](./images/vbs-app-visibility-12.png)  
   
 As you have noticed, you could create only one **Bind-If** component surrounding the *Grid Row* and write a condition similar to:
 ```
-  [[ $variables.photoName != "" && $variables.userName != "" ]]
+  [[ $variables.userName && $variables.photoName ]]
 ```
 But again, for academical reasons we create two **bind-if** to show you the different ways to use the Expresion Editor and the Test Field directly.
-You will notice too that the **Bind-if** components have a **Temporary Override** value that let you test the visibility changing a temporary value of true or false.
+You will notice too that the **Bind-if** components have a **Temporary Override** value that let you test the visibility, changing a temporary value of true or false directly overriding the condition value.
   
 ![](./images/vbs-app-visibility-13.png)  
   
-If you change the Temporary Override Value to **False** in one of the *Bind-if* components you can see how the surrounded **Grid Row** and its children (in the structure tree) will be hidden in the Design window. After testing it, please you don't forget to switch the Temporary Override to **Off** value to avoid issues.
+If you change the Temporary Override Value to **True** in both **Bind-If** components, you can see how the surrounded **Grid Row** and its children (in the structure tree) will be shown in the Design window. After testing it, please you don't forget to switch the Temporary Override to **Off** value to avoid issues. Anyway you will be advice with a orange sign that you **Bind-If** components are overridden.
   
 ![](./images/vbs-app-visibility-14.gif)  
-  
-Why doesn't the **binf-if** component work right now? Because you must to create an event in each **Text Input** to store the value (when it change) in the linked variable. You'll can practice this creation process in next Sections.
   
 </details>  
 <details>
