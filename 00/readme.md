@@ -433,11 +433,11 @@ Click in the **Body** tab and write a dummy text in the *Example* text area, som
   
 ![](./images/vbs-app-servicecon-12.png)
   
-Then click in the **Test** tab. You could configure here a real test if you have all the data and content length headers (out of the scope of this workshop). As you can see in the **URL Preview** is the API URL that the request. The default values will be changed by the correct ones in the mobile application Actions. You don't worry about that right now, it's simply a test!.
+Then click in the **Test** tab. You could configure here a real test if you had all the data and content length headers (out of the scope of this workshop). As you can see in the **URL Preview**, it is the API URL that the request will use. The default values will be changed by the correct ones in the mobile application Actions. You don't worry about that right now, it's simply a test!.
   
 ![](./images/vbs-app-servicecon-13.png)
   
-Then click **Send Request** button to send a invalid Request, but validate the endpoint connection with an error response (you are validating the connection not the object creation that will be invalid as you didn't use a valid values and headers at this moment).
+Then click **Send Request** button to send an "invalid" (wrong values) Request, but is useful to validate the endpoint conectivity even with an error response (you are validating the conectivity with the OCI service, not the object creation, that it will be invalid as you didn't use valid values and headers at this moment).
   
 You might receive a status 400 and an error message like (don't worry about that it's normal, remember this it only to test the connectivity with the cloud service not the functionality)
 ```json
@@ -448,10 +448,11 @@ You might receive a status 400 and an error message like (don't worry about that
     "status": 400
 }
 ```
+Click **Create** button to finish the process.
   
 ![](./images/vbs-app-servicecon-14.png)
   
-Click **Create** button to finish the process. If you receive an alert requestMessages, please avoid it and click in **Finish** button to create the Service Connection.
+If you receive an alert requestMessages, please avoid it and click in **Finish** button to create the Service Connection.
   
 ![](./images/vbs-app-servicecon-15.png)
   
