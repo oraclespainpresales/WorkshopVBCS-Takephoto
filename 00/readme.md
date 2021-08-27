@@ -372,7 +372,7 @@ Copy and paste your Object Storage endpoint in the **URL** field. Then change th
 |Field|Value|
 |-|-|
 |Method|PUT|
-|URL| <<your OBS endpoint>> |
+|URL| [your Object Storage endpoint](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/) |
 |Action Hint|Create|
   
 ![](./images/vbs-app-servicecon-03.png)
