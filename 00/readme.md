@@ -429,7 +429,7 @@ When you add this values you should see three new Parameters in the window, one 
 
 Now you migth test the connection, but unfortunately you should add headers with the content lenght and the correct parameters in the Request call. To simplify this process, you'll create a dummy Test to check the network connectivity but not the API functionality.
 
-Click in the **Body** tab and write a dummy text in the *Example* text area, something like ```this is a test"```.
+Click in the **Body** tab and write a dummy text in the *Example* text area, something like ```this is a test"```. Change the *Media Type* to **application/x-www-form-urlencoded** or **multipart/form-data**.
   
 ![](./images/vbs-app-servicecon-12.png)
   
