@@ -439,7 +439,7 @@ Then click in the **Test** tab. You could configure here a real test if you had 
   
 Then click **Send Request** button to send an "invalid" (wrong values) Request, but is useful to validate the endpoint conectivity even with an error response (you are validating the conectivity with the OCI service, not the object creation, that it will be invalid as you didn't use valid values and headers at this moment).
   
-You might receive a status 400 and an error message like (don't worry about that it's normal, remember this it only to test the connectivity with the cloud service not the functionality)
+You might receive a status 400 and an error message (don't worry about that it's normal, remember this it only to test the connectivity with the cloud service not the functionality)
 ```json
 {
     "type": "abcs://proxy_problem/signing/missingHeader",
