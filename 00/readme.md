@@ -372,7 +372,7 @@ Copy and paste your Object Storage endpoint in the **URL** field. Then change th
 |Field|Value|
 |-|-|
 |Method|PUT|
-|URL|<your OBS endpoint>|
+|URL| <<your OBS endpoint>> |
 |Action Hint|Create|
   
 ![](./images/vbs-app-servicecon-03.png)
