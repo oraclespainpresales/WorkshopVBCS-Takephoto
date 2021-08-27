@@ -330,7 +330,7 @@ As you have noticed, you could have created only one **Bind-If** component surro
 ```
   [[ $variables.userName && $variables.photoName ]]
 ```
-But again, for academical reasons we create two **bind-if** to show you the different ways to use the Expresion Editor and the Test Field directly.
+But again, for academical reasons we create two **bind-if** to show you the different ways to use the Expresion Editor and the Test field directly.
 You will notice too that the **Bind-if** components have a **Temporary Override** value that let you test the visibility, changing a temporary value of true or false directly overriding the condition value.
   
 ![](./images/vbs-app-visibility-13.png)  
@@ -341,14 +341,119 @@ If you change the Temporary Override Value to **True** in both **Bind-If** compo
   
 </details>  
 <details>
-  <summary>3.4 Creating the API REST Service Connector (click to show)</summary>
-
+  <summary>3.4 Creating the API REST Service Connection (click to show)</summary>
+  
 --- 
+To work with an external service's REST API, Visual Builder needs basic information about that service. A service connection provides this information by describing the connection to the service, including connection details, properties, and the REST endpoints provided by the service that you want to use in your application.
+  
+You'll have to create a connection to Oracle Cloud Infrastructure (OCI) to upload your photos or files in general to an Object Storage Bucket. To do that you'll have to configure a Service connection component that you'll use during the actions creation (described in the next section). Let's create the API REST Service connection before the events and actions creation as you'll have to use the API REST in those actions.
     
 ---
   
-### Creating the API REST Service Connector
-  </details>
+### Creating the API REST Service Connection.
+You can create service connections to REST services that support both the OpenAPI 3.0 and Swagger 2.0 specifications. If you remember, you have an user API Key. This API Key will be used in this section to create the Service Connection component, if you don't have any API Key you won't be able to connect to OCI API REST because you will receive an Unathorized connection error (401). To create the Service Connection please follow next steps.
+
+Click in Service Connection icon in the visual builder left main menu. Then Click **+Service Connection** button to create a new Service Connection.
+  
+![](./images/vbs-app-servicecon-01.png)  
+
+A new Service Connection wizard should be opened. Select *Define by Endpoint* option.
+  
+![](./images/vbs-app-servicecon-02.png)
+  
+Now you must put the OCI Object Storage endpoint according to your region. The trainers of the workshop will give you the appropiate endpoint. In this tutorial we'll use the frackfurt endpoint, but this endpoint could change in other worshops, please ask the trainers about the endpoint if they didn't give you one.
+ ```
+ https://objectstorage.eu-frankfurt-1.oraclecloud.com
+ ```
+> Note: you could create your own Object Storage Bucket in your OCI Tenancy, following the next [tutorial](). If you create your own Object Storage Bucket you have to use the appropiate [endpoint](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/) according to the region in which you create the bucket.
+  
+Copy and paste your Object Storage endpoint in the **URL** field. Then change the **Method** to *PUT*. Action Hint should be *Create*. Then click **Next** to continue with the creation.
+  
+|Field|Value|
+|Method|PUT|
+|URL|<your OBS endpoint>|
+|Action Hint|Create|
+  
+![](./images/vbs-app-servicecon-03.png)
+  
+Next click in the *Server* tab to configure the authentication method.
+  
+![](./images/vbs-app-servicecon-04.png)
+  
+Select **Oracle Cloud Infrastructure API Signature 1.0** as authentification method. If you want to know more about this algorithm you can review it [here](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/signingrequests.htm)
+  
+![](./images/vbs-app-servicecon-05.png)
+  
+Then click in the pencil icon near *Enter API Key and private key*, to config the authetication wuth the API Key.
+  
+![](./images/vbs-app-servicecon-06.png)
+  
+The *Signature*/Key ID will be constructed using the following sintax
+```
+ Key ID =  [TENANCY OCID]/[USER OCID]/[KEY FINGERPRINT]
+```
+As an example
+```
+  ocid1.tenancy.oc1..aaaaxyz/ocid1.user.oc1..aaaaabc/1f:9a:f9:ad:4a:a4:44:6c:65:0e:94:4f:30:7c:91:ac
+```
+You must to create your API Key ID and copy it in the *Key ID* field. Then copy your *private key* in pem format in the **Private Key** field, including the ---BEGIN PRIVATE KEY--- till ---END PRIVATE KEY---. Then click **Save** button to finish.
+  
+![](./images/vbs-app-servicecon-07.png)
+  
+Next you must change the *Connection Type* to **Always use proxy, irrespective of CORS support** from the list.
+  
+![](./images/vbs-app-servicecon-08.png)
+  
+The app will ask your user name and password every time you access it. To allow anonymous access (to avoid introduce your credentials every time) you must check **Allow anonymous access to the service connection infrastructure**. Then Select **Same as Authenticated User** from the *Authentication for Anonymous Users* list. This method will be the same as autehnticated users, that is the API Key method that configured before.
+  
+![](./images/vbs-app-servicecon-09.png)
+  
+Next click in the *Request* tab to configure the PUT Request as described in the [Object Storage API REST upoload multipart file manual](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/MultipartUpload/UploadPart). You'll configure the PUT Request to upload a multipart file to the Object Storage Bucket in the next steps.
+  
+![](./images/vbs-app-servicecon-10.png)
+  
+To complete the PUT Request, you must add next values to the end of the *URL* field (according to the API REST definition for *UploadPart*).
+```
+  n/{namespaceName}/b/{bucketName}/u/{objectName}
+```
+When you add this values you should see three new Parameters in the window, one for each value. All of them must be required and *String* type. You could use whichever default values you want, as they will be change in an Action call in the mobile app. For example
+  
+|Parameter|Value|
+|namespaceName|namespace|
+|bucketName|abc|
+|objectName|abc.txt|
+
+![](./images/vbs-app-servicecon-11.png)
+
+Now you migth test the connection, but unfortunately you should add headers with the content lenght and the correct parameters in the Request call. To simplify this process, you'll create a dummy Test to check the network connectivity but not the API functionality.
+
+Click in the **Body** tab and write a dummy text in the *Example* text area, something like ```this is a test"```.
+  
+![](./images/vbs-app-servicecon-12.png)
+  
+Then click in the **Test** tab. You could configure here a real test if you have all the data and content length headers (out of the scope of this workshop). As you can see in the **URL Preview** is the API URL that the request. The default values will be changed by the correct ones in the mobile application Actions. You don't worry about that right now, it's simply a test!.
+  
+![](./images/vbs-app-servicecon-13.png)
+  
+Then click **Send Request** button to send a invalid Request, but validate the endpoint connection with an error response (you are validating the connection not the object creation that will be invalid as you didn't use a valid values and headers at this moment).
+  
+You might receive a status 400 and an error message like (don't worry about that it's normal, remember this it only to test the connectivity with the cloud service not the functionality)
+```json
+{
+    "type": "abcs://proxy_problem/signing/missingHeader",
+    "title": "Http Signature",
+    "detail": "HTTP header content-length is required by this authentication method",
+    "status": 400
+}
+```
+  
+![](./images/vbs-app-servicecon-14.png)
+  
+Click **Create** button to finish the process. If you receive an alert requestMessages, please avoid it and click in **Finish** button to create the Service Connection.
+  
+![](./images/vbs-app-servicecon-15.png)
+  
+</details>
 <details>
   <summary>3.5 Component Events & Actions (click to show)</summary>
 
