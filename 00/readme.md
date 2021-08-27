@@ -370,6 +370,7 @@ Now you must put the OCI Object Storage endpoint according to your region. The t
 Copy and paste your Object Storage endpoint in the **URL** field. Then change the **Method** to *PUT*. Action Hint should be *Create*. Then click **Next** to continue with the creation.
   
 |Field|Value|
+|-|-|
 |Method|PUT|
 |URL|<your OBS endpoint>|
 |Action Hint|Create|
@@ -384,7 +385,7 @@ Select **Oracle Cloud Infrastructure API Signature 1.0** as authentification met
   
 ![](./images/vbs-app-servicecon-05.png)
   
-Then click in the pencil icon near *Enter API Key and private key*, to config the authetication wuth the API Key.
+Then click in the pencil icon near *Enter API Key and private key*, to config the authetication wuth the API Key. If you create your own API Key credentials at the beggining of the workshop you can use them now. On the other hand if you didn't create any API Key credentials, the trainers will give you ones to create the API Key ID for the Service Connection.
   
 ![](./images/vbs-app-servicecon-06.png)
   
@@ -396,7 +397,7 @@ As an example
 ```
   ocid1.tenancy.oc1..aaaaxyz/ocid1.user.oc1..aaaaabc/1f:9a:f9:ad:4a:a4:44:6c:65:0e:94:4f:30:7c:91:ac
 ```
-You must to create your API Key ID and copy it in the *Key ID* field. Then copy your *private key* in pem format in the **Private Key** field, including the ---BEGIN PRIVATE KEY--- till ---END PRIVATE KEY---. Then click **Save** button to finish.
+You must to create your *API Key ID* and copy it in the **Key ID** field. Then copy your *private key* in pem format in the **Private Key** field, including the **---BEGIN PRIVATE KEY---** till **---END PRIVATE KEY---**. Then click **Save** button to finish.
   
 ![](./images/vbs-app-servicecon-07.png)
   
@@ -419,6 +420,7 @@ To complete the PUT Request, you must add next values to the end of the *URL* fi
 When you add this values you should see three new Parameters in the window, one for each value. All of them must be required and *String* type. You could use whichever default values you want, as they will be change in an Action call in the mobile app. For example
   
 |Parameter|Value|
+|-|-|
 |namespaceName|namespace|
 |bucketName|abc|
 |objectName|abc.txt|
