@@ -563,19 +563,15 @@ Now you have to copy and paste the next javascript code in the *JavaScript* edit
   
 ![](./images/vbs-app-evenactions-13.gif)
   
-Then click **Actions** tab to return to the Action Chain Editor. Click in the **Call Function** action to map the input paramter.
+As you can see your js function had a file input parameter named *file* (review the code if you want to see the input parameter). But this parameter is not mapped right now. You have to map the input file to assign it a value in real time.
+  
+Then click **Actions** tab to return to the Action Chain Editor. Click in the **Call Function** action to map the input paramter. Click in the *Assign* link on the right of Input Parameters field to access **Assign Input Parameters** window.
   
 ![](./images/vbs-app-evenactions-14.png)
-  
-As you can see your js function had a file input parameter (review the code if you want to see the input parameter). But this parameter is not mapped right now. You have to map the input file to assign it a value in real time. 
-  
-Click in the *Assign* link on the right of Input Parameters field to access **Assign Input Parameters** window.
-  
-![](./images/vbs-app-evenactions-15.png)
-  
+   
 In the Assign Input Parameters window you can assign variable values from a **Source** to a **Target**. Select the little triangle/arrow of *[] files* variable to show it content. It should be **{} item[0]**. Then select **{} item[0]** as Source and drag and drop it in the **{} file** Target. Then Click **Save** button to finish the process.
   
-![](./images/vbs-app-evenactions-16.gif)
+![](./images/vbs-app-evenactions-15.gif)
   
   </details>
 </details>
