@@ -573,9 +573,9 @@ Click in the *Assign* link on the right of Input Parameters field to access **As
   
 ![](./images/vbs-app-evenactions-15.png)
   
-In the Assign Input Parameters window you can assign variable values from a Source to a Target. Select the little triangle/arrow of *[] files* variable to show it content, that it should be **{} item[0]**. Then select **{} item[0]** as Source and drag and drop it in the **{} file** Target.
+In the Assign Input Parameters window you can assign variable values from a **Source** to a **Target**. Select the little triangle/arrow of *[] files* variable to show it content. It should be **{} item[0]**. Then select **{} item[0]** as Source and drag and drop it in the **{} file** Target. Then Click **Save** button to finish the process.
   
-
+![](./images/vbs-app-evenactions-16.gif)
   
   </details>
 </details>
