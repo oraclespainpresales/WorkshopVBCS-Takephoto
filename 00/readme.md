@@ -527,7 +527,7 @@ Write a name for the function like **AddImageFunction** and click in **Create** 
   
 ![](./images/vbs-app-evenactions-11.png)
   
-Next click in the *Go to Module Function* link below the *Function Name* field to access to the JavaScripot Editor.
+Next click in the *Go to Module Function* link below the *Function Name* field to access to the JavaScript Editor.
   
 ![](./images/vbs-app-evenactions-12.png)
   
