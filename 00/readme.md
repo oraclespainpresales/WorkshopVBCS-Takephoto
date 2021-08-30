@@ -527,9 +527,13 @@ Write a name for the function like **AddImageFunction** and click in **Create** 
   
 ![](./images/vbs-app-evenactions-11.png)
   
-This function will be used to convert the photo taken in your mobile phone as a *BLOB* object type to a *FILE* type. This js function will create an URL to use in the **Image** component that you put in the mobile UI at the begining of the workshop. If you try to put the blob directly in the *Image* component you won't have anything as blob type is an incompatible object type for that component.
+Next click in the *Go to Module Function* link below the *Function Name* field to access to the JavaScripot Editor.
   
-Now you have to copy next javascript code in the *JavaScript* editor.
+![](./images/vbs-app-evenactions-12.png)
+  
+This function will be used to convert the photo taken in your mobile phone as a *BLOB* object type to a *FILE* type. This js function will convert the blob/image to base64 string (data) and it'll create an URL to use in the **Image** component that you put in the mobile UI at the begining of the workshop. If you try to put the blob directly in the *Image* component you won't have anything as blob type is an incompatible object type for that component.
+  
+Now you have to copy and paste the next javascript code in the *JavaScript* editor.
   
 ```js
   AddImageFunction(file) {
@@ -557,7 +561,21 @@ Now you have to copy next javascript code in the *JavaScript* editor.
     }
   ```
   
-![](./images/vbs-app-evenactions-12.png)
+![](./images/vbs-app-evenactions-13.gif)
+  
+Then click **Actions** tab to return to the Action Chain Editor. Click in the **Call Function** action to map the input paramter.
+  
+![](./images/vbs-app-evenactions-14.png)
+  
+As you can see your js function had a file input parameter (review the code if you want to see the input parameter). But this parameter is not mapped right now. You have to map the input file to assign it a value in real time. 
+  
+Click in the *Assign* link on the right of Input Parameters field to access **Assign Input Parameters** window.
+  
+![](./images/vbs-app-evenactions-15.png)
+  
+In the Assign Input Parameters window you can assign variable values from a Source to a Target. Select the little triangle/arrow of *[] files* variable to show it content, that it should be **{} item[0]**. Then select **{} item[0]** as Source and drag and drop it in the **{} file** Target.
+  
+
   
   </details>
 </details>
