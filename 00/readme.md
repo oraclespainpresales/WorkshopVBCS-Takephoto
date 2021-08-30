@@ -461,9 +461,103 @@ If you receive an alert requestMessages, please avoid it and click in **Finish**
   <summary>3.5 Component Events & Actions (click to show)</summary>
 
 --- 
-    
+Almost all components in Visual Builder have an *Event Handler*. You can create events of different types for the components, like a click event for a button or something like that. When you trigger an event you have to create an *Action Chain* for that event. An action chain determines what happens when, for example, you click a button on a page. An action chain might be a short sequence of a few actions, but it could contain many actions as well as logic for determining what happens in the sequence.
+  
+You'll practice about how to create events and action chains for that events. You'll create an **Action Chain** in the Take Photo button when you click the button. In the action chain you'll use the *Service Connection*, created in the last section, to connect via REST API to the OCI Object Storage Service.
 ---
   
 ### Component Events & Actions
+You'll create action chains by assembling simple, individual actions into a sequence in the Action Chain editor. The Camera component is special as it consist of a *File Picker* component that it has tied a *Button* (with an icon) component. You will have to create an *ojSelect* event in the File Picker that will trigger the appropiate *Action Chain*. When you click the button, it will trigger the  action chain related to *ojSelect* event in the File Picker component, not in the button. Let's create the take photo action chain.
+  
+Click in the **Camera (File Picker)** component in the *Components* tree (remember that you have to create the trigger and the action chain in the File Picker component not in the tied button). Next click in the **Events** Tab in *Properties*.  
+  
+![](./images/vbs-app-evenactions-01.png)
+  
+As you can see, you don't have any *Event* in the File Picker component. Click in **+ Next Event** button and then select *On 'Selected Files' item to create a new event with selected file (the photo file), when you take a photo.
+  
+![](./images/vbs-app-evenactions-02.png)
+  
+Now you should be in the *Action Chain Editor*. You can see the name of the Action, something like *CameraFilePickerSelectChain*. For academical reasons, you'll create an *If* logic action to verify that the userName and photoName components values are different that empty. You create before the *if-bind* components to verify those conditions, but you can practice here with *if-logic* action to compare with *if-bind* component.
+  
+Drag and Drop the **if** *logic* action as your first action in the action chain.
+  
+![](./images/vbs-app-evenactions-03.gif)
+  
+Click in the new if Action to select it. Then In the **Condition** *Property* you must create the match condition to verify if the userName and photoName have values not empty values. Click the *fx* icon to access the *Expression Editor*
+  
+![](./images/vbs-app-evenactions-04.png)
+  
+Now you must write the condition. You can drag and drop the variables userName and photoName to create the condition or write next directly in the line 1 of the Editor:
+  
+```
+  $page.variables.userName && $page.variables.photoName
+```
+
+Then click in the **Save** button to create the condition in the *Action* and return to the Action Chain Editor.
+  
+![](./images/vbs-app-evenactions-05.png)
+  
+If the condition would be **FALSE** the you'll want to show an error or warning message on the screen. Let's create the error/warning message.
+  
+Drag and Drop a **Fire Notification** action to the false branch.
+  
+![](./images/vbs-app-evenactions-06.gif)
+  
+Click in the *Fire Notification* action to select it. In the Summary field you could write something like ```NoUserPhotoName```. Then in the Message field you can write some descriptive message like ```No file name correctly defined.``` or whatever other message that you can put on the screen when the **if-logic** action is **FALSE**. 
+  
+![](./images/vbs-app-evenactions-07.png)
+  
+You could create a more elaborated message like:
+  
+```
+  "No file name correctly defined. userName: " + $page.variables.userName + " photoName: " + $page.variables.photoName
+```
+  
+![](./images/vbs-app-evenactions-08.png)
+  
+Next you have to create the **TRUE** branch of the *if* action. Drag and Drop a **Call Function** (JS icon) to the true branch (+).
+  
+![](./images/vbs-app-evenactions-09.gif)
+  
+Then click in the **Create** link on the right of the *Function Name* field.
+  
+![](./images/vbs-app-evenactions-10.png)
+  
+Write a name for the function like **AddImageFunction** and click in **Create** button.
+  
+![](./images/vbs-app-evenactions-11.png)
+  
+This function will be used to convert the photo taken in your mobile phone as a *BLOB* object type to a *FILE* type. This js function will create an URL to use in the **Image** component that you put in the mobile UI at the begining of the workshop. If you try to put the blob directly in the *Image* component you won't have anything as blob type is an incompatible object type for that component.
+  
+Now you have to copy next javascript code in the *JavaScript* editor.
+  
+```js
+  AddImageFunction(file) {
+      return new Promise(
+        resolve=>{
+          const blobURL = URL.createObjectURL(file);
+          const reader  = new FileReader();
+          reader.addEventListener("load", function () {
+            // convert image file to base64 string
+            console.log("DATA->" + reader.result);            
+            resolve({
+              data: reader.result,              
+              url: blobURL
+            });
+            document.getElementById("mypic").onload = function() {
+              URL.revokeObjectURL(blobURL);
+            };
+          }, false);
+
+          if (file) {
+            reader.readAsDataURL(file);
+          }
+        }
+      );
+    }
+  ```
+  
+![](./images/vbs-app-evenactions-12.png)
+  
   </details>
 </details>
