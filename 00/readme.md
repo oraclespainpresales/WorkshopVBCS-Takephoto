@@ -599,15 +599,16 @@ Next you have to drag and drop an Assign Variables action to the workflow below 
   
 ![](./images/vbs-app-evenactions-21.gif)
   
-Click in the **Assign** link of Variables to open the Assign Values Editor.
+Click in the **Assign** link of Variables property to open the Assign Values Editor.
   
 ![](./images/vbs-app-evenactions-22.png)
   
-Then you could drag and drop from Sources -> Results -> callFunctionAddImageFunction to the imageURL target and add <.url>. Or you can click in the *Target* **imageURL** variable and assign next value
+Then you could drag and drop from Sources -> Results -> callFunctionAddImageFunction to the imageURL target and add <.url>. Or you can click in the *Target* **imageURL** variable and assign next value in the below editor.
   
 ```
   $chain.results.callFunctionAddImageFunction.url
 ```
+  
 Click in the **Save** button to save and return to the Actions editor.
   
 ![](./images/vbs-app-evenactions-23.png)
@@ -646,7 +647,7 @@ Next click **Save** button to return to the *Actions Chain* editor.
   
 ![](./images/vbs-app-evenactions-28.png)
   
-Now the *Input Paramters* should be mapped. But you have to send the photo file too. You can read in the [API description](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/MultipartUpload/UploadPart) that in the uploadPart call you must add the image file (as binary String) in the body of the call. Let's map the photo file to the body parameter.
+Now the *Input Paramters* should be showed as mapped. But you have to send the photo file too. You can read in the [API description](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/MultipartUpload/UploadPart) that in the **uploadPart** call you must add the image file (as binary String) in the body of the call. Let's map the photo file to the body parameter.
   
 Click in the **Assign** link of the *Parameters* property to access to the Assign Parameters Editor.
   
@@ -672,7 +673,7 @@ Then click in the little triangel/arrow of the Source Results **callRestPutNName
   
 ![](./images/vbs-app-evenactions-33.gif)
 
-Now you must to do the same for the **Message** property, but you have to put the status variable this time. Click in the fx icon of the Message property to open the Expresion Editor.
+Now you must to do the same for the **Message** property, but you have to put the status variable this time. Click in the **fx** icon of the Message property to open the Expresion Editor.
   
 ![](./images/vbs-app-evenactions-34.png)
   
@@ -684,7 +685,7 @@ Next change tthe **Display Mode** property to *transient*.
   
 ![](./images/vbs-app-evenactions-36.png)
   
-Next change tthe **Notification Type** property to *confirmation*.
+Next change the **Notification Type** property to *confirmation*.
 
 ![](./images/vbs-app-evenactions-37.png)
   
@@ -694,7 +695,7 @@ Drag and Drop a **Return** Login action below the last *Fire Notification* actio
   
 ![](./images/vbs-app-evenactions-38.gif)
   
-Then you should assign a value in the return payload (as a best practice you should return a value after an action chain workflow, but it's optional, for academical reason you'll put a value in the payload property).
+Then you should assign a value in the return payload (as a best practice you should return a value after an action chain workflow, but it's optional, for academical reasons you'll put a value in the payload property).
   
 Click in the **Assign** link of the *Payload* proerty.
   
@@ -724,7 +725,7 @@ Then click the **Assign** link of the *Payload* property to access the Assign Pa
   
 ![](./images/vbs-app-evenactions-45.png)
   
-In the Assign PArameter Editor window. Click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the **error** result to the **payload** Target. Then click in the **Save** buton to return to the Action Chain editor.
+In the Assign Parameter Editor window. Click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the **error** result to the **payload** Target. Then click in the **Save** buton to return to the Action Chain editor.
   
 ![](./images/vbs-app-evenactions-46.gif)
   
