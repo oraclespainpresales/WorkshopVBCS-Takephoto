@@ -669,7 +669,7 @@ In the Summary Property, click in the *fx* icon to open the Expression Editor.
   
 ![](./images/vbs-app-evenactions-32.png)
   
-Then click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Then click in the little triangle/arrow of the **message** item to show the summary result (that variable will be filled automatically after the API REST call). Drag and Drop the **summary** result to the first line on the right marked as 1. Then click in the **Save** buton to return to the Action Chain editor.
+Then click in the little triangle/arrow of the Source Results **callRestPutNNamespace... ** item. Then click in the little triangle/arrow of the **message** item to show the *summary* result (that variable will be filled automatically after the API REST call). Drag and Drop the **summary** result to the first line on the right marked as 1. Then click in the **Save** buton to return to the Action Chain editor.
   
 ![](./images/vbs-app-evenactions-33.gif)
 
@@ -677,11 +677,11 @@ Now you must to do the same for the **Message** property, but you have to put th
   
 ![](./images/vbs-app-evenactions-34.png)
   
-Then click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the status result to the first line on the right marked as 1. Then click in the **Save** buton to return to the Action Chain editor.
+Then click in the little triangle/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the **status** result to the first line on the right marked as 1. Then click in the **Save** buton to return to the Action Chain editor.
   
 ![](./images/vbs-app-evenactions-35.gif)
   
-Next change tthe **Display Mode** property to *transient*.
+Next change the **Display Mode** property to *transient*.
   
 ![](./images/vbs-app-evenactions-36.png)
   
@@ -691,7 +691,7 @@ Next change the **Notification Type** property to *confirmation*.
   
 To finish the *Action Chain* workflow you should add several **Return** actions to avoid issues.
   
-Drag and Drop a **Return** Login action below the last *Fire Notification* action created.
+Drag and Drop a **Return** Logic action below the last *Fire Notification* action created.
   
 ![](./images/vbs-app-evenactions-38.gif)
   
@@ -701,11 +701,11 @@ Click in the **Assign** link of the *Payload* proerty.
   
 ![](./images/vbs-app-evenactions-39.png)
   
-Then click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Then click in the little triangle/arrow of the **message** item to show the **summary** result (that variable will be filled automatically after the API REST call). Drag and Drop the **summary** result to the **payload** Target. Then click in the **Save** buton to return to the Action Chain editor.
+Then click in the little triangle/arrow of the Source Results **callRestPutNNamespace... ** item. Then click in the little triangle/arrow of the **message** item to show the **summary** result (that variable will be filled automatically after the API REST call). Drag and Drop the **summary** result to the **payload** Target. Then click in the **Save** buton to return to the Action Chain editor.
   
 ![](./images/vbs-app-evenactions-40.gif)
    
-You must do the same for the failure *Fire Notification^* actions. Drag and Drop a **Return** Login action below each failure *Fire Notification* actions created. 
+You must do the same for the failure *Fire Notification^* actions. Drag and Drop a **Return** Logic action below each failure *Fire Notification* actions created. 
   
 ![](./images/vbs-app-evenactions-41.gif)
 
@@ -713,11 +713,11 @@ Click in the *Call REST* failure **Fire Notification** action. Then in the **Mes
   
 ![](./images/vbs-app-evenactions-42.png)  
 
-Then click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the **status** result to the first line on the right marked as 1. Then click in the **Save** buton to return to the Action Chain editor.
+Then click in the little triangle/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the **status** result to the first line on the right marked as 1. Then click in the **Save** buton to return to the Action Chain editor.
 
 ![](./images/vbs-app-evenactions-43.gif)
   
-Next click in the **Return** action below to change the **Outcome** value from success to failure.
+Next click in the **Return** action below to change the **Outcome** value from success to **failure**.
   
 ![](./images/vbs-app-evenactions-44.png)
   
@@ -725,11 +725,17 @@ Then click the **Assign** link of the *Payload* property to access the Assign Pa
   
 ![](./images/vbs-app-evenactions-45.png)
   
-In the Assign Parameter Editor window. Click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the **error** result to the **payload** Target. Then click in the **Save** buton to return to the Action Chain editor.
+In the Assign Parameter Editor window. Click in the little triangle/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the **error** result to the **payload** Target. Then click in the **Save** buton to return to the Action Chain editor.
   
 ![](./images/vbs-app-evenactions-46.gif)
   
-
+Change the last Return logic action **Outcome** to *failure* value. In this action you don't have to assign any payload as you didn't any REST call and you don't have an error result.
+  
+![](./images/vbs-app-evenactions-47.png)
+  
+After following all the steps, You should have an **Action Chain** workflow similar to the next screenshot.
+  
+![](./images/vbs-app-evenactions-48.png)
   
   </details>
 </details>
