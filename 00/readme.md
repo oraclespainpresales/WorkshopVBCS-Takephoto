@@ -569,9 +569,52 @@ Then click **Actions** tab to return to the Action Chain Editor. Click in the **
   
 ![](./images/vbs-app-evenactions-14.png)
    
-In the Assign Input Parameters window you can assign variable values from a **Source** to a **Target**. Select the little triangle/arrow of *[] files* variable to show it content. It should be **{} item[0]**. Then select **{} item[0]** as Source and drag and drop it in the **{} file** Target. Then Click **Save** button to finish the process.
+In the Assign Input Parameters window you can assign variable values from a **Source** to a **Target**. Select the little triangle/arrow of *[] files* variable to show it content. It should be **{} item[0]**. Then select **{} item[0]** as Source and drag and drop it in the **{} file** Target. Then Click **Save** button to finish the process and return to the Action Chain Editor.
   
 ![](./images/vbs-app-evenactions-15.gif)
+  
+Now you'll have to assign the output of the Js Function to a new flow variables (as you created at the begining of the workshop). The URL output will be assigned to a new imageURL variable and that variable will be used in the data field of the **Image** component. 
+  
+Create the new variable imageURL. Click in *Variables* tab in the main menu editor (you should have other 2 variables right now).
+  
+![](./images/vbs-app-evenactions-16.png)
+  
+Click **+ Variable** button to create the new variable. Write a varaible name for the URL, like *imageURL* of **String** type. Then Click in **New** Button to create the new variable.
+  
+![](./images/vbs-app-evenactions-17.png)
+  
+Now Click in the *Page Designer* tab to assign the new variable to the Image component. Select the **Image** component in the *Structure* tree as this component is hidden (you could select in the UI editor, but you should override the bind-if components. It's better select it in the Structure tree).
+  
+![](./images/vbs-app-evenactions-18.png)
+  
+Next click in the **Data** tab *Properties*. Then click in the little triangle/arrow near fx icon of the **Source URL** field and select the new variable created (**imageURL**) to assign it as source URL.
+  
+![](./images/vbs-app-evenactions-19.gif)
+  
+Click in the **Actions** tab to return to the Actions editor to continue creating the Action Chain workflow.
+  
+![](./images/vbs-app-evenactions-20.png)
+  
+Next you have to drag and drop an Assign Variables action to the workflow below Call Function action. This action will be used to assign values (from the Js Function output) to variables.
+  
+![](./images/vbs-app-evenactions-21.gif)
+  
+Click in the **Assign** link of Variables to open the Assign Values Editor.
+  
+![](./images/vbs-app-evenactions-22.png)
+  
+Then you could drag and drop from Sources -> Results -> callFunctionAddImageFunction to the imageURL target and add <.url>. Or you can click in the *Target* **imageURL** variable and assign next value
+  
+```
+  $chain.results.callFunctionAddImageFunction.url
+```
+Click in the **Save** button to save and return to the Actions editor.
+  
+![](./images/vbs-app-evenactions-23.png)
+  
+Next you'll have to add a *Call Rest* action to use the **Service Connection** that you created in the last section of the workshop. This action will do a call rest to the OCI API to upload the photo to an Object Storage Bucket. If you didn't create any OCI Objetc Storage bucket at the begining of the workshop, the trainers will give you an Object Storage bucket name to use in this part of the workshop.
+  
+
   
   </details>
 </details>
