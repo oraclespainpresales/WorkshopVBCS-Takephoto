@@ -614,6 +614,120 @@ Click in the **Save** button to save and return to the Actions editor.
   
 Next you'll have to add a *Call Rest* action to use the **Service Connection** that you created in the last section of the workshop. This action will do a call rest to the OCI API to upload the photo to an Object Storage Bucket. If you didn't create any OCI Objetc Storage bucket at the begining of the workshop, the trainers will give you an Object Storage bucket name to use in this part of the workshop.
   
+You have to drag and drop a **Call REST** action below the *Assign Variable* action in the workflow.
+  
+![](./images/vbs-app-evenactions-24.gif)
+  
+Let's to complete the **Call REST** action. Click in the *Call REST* action and then click in the **Select** link of the *Endpoint* property.
+  
+![](./images/vbs-app-evenactions-25.png)
+   
+Next Select the PUT API REST Call created in the last Section from the selecction tree and click **Select** button to return to the Actions Editor.
+  
+![](./images/vbs-app-evenactions-26.png)
+
+As you can see, new not mapped **Input Parameters** and **Parameters** should be added to the *Endpoint* Properties. This new parameters correspond to the parameters added when you created the PUT API REST call in the last section. Let's map these parameters to send the photo to the Object Storage bucket.
+  
+Click in the **Assign** link of the *Input Parameters* Endpoint property to open the Assign Editor.
+  
+![](./images/vbs-app-evenactions-27.png)
+  
+You must to assign values to the Target *uriParams*. Click in each Target parameter to assign values in the below editor.
+
+|Param|Value|
+|--|--|
+|buckerName|your Object Storage Bucket name|
+|namespaceName|your Object Storage Tenancy namespace|
+|objectName| $page.variables.userName + "-" + $page.variables.photoName + "-" + $variables.files[0].name|
+  
+You can click in the *uriParam* parameter to review your values. You should see an object in JSON notation. 
+
+Next click **Save** button to return to the *Actions Chain* editor.
+  
+![](./images/vbs-app-evenactions-28.png)
+  
+Now the *Input Paramters* should be mapped. But you have to send the photo file too. You can read in the [API description](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/MultipartUpload/UploadPart) that in the uploadPart call you must add the image file (as binary String) in the body of the call. Let's map the photo file to the body parameter.
+  
+Click in the **Assign** link of the *Parameters* property to access to the Assign Parameters Editor.
+  
+![](./images/vbs-app-evenactions-29.png)
+  
+Click in the little triangle/arrow in the Sources **[]files** to show the file items. Then Drag the **{} item[0]** as Source and Drop in the **{} body** Parameters Target.
+  
+![](./images/vbs-app-evenactions-30.gif)
+  
+Now you must finish the Action workflow. As you can see you have two branches below *Call REST* action, one for call REST failure with a predefined *Fire Notificaion* action and other branch to a successfull call. You could add new actions to the success branch, but in this workshop you'll put a Fire Notificacion action too as in the failure branch. 
+  
+Drag and Drop a **Fire Notification** action to the **(+)** below success tag.
+  
+![](./images/vbs-app-evenactions-31.gif)
+  
+The Fire Notification action default value is error, but you'll change this behaviour to show a success message.  Let's complete the *Fire Notification* Properties.
+  
+In the Summary Property, click in the *fx* icon to open the Expression Editor.
+  
+![](./images/vbs-app-evenactions-32.png)
+  
+Then click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Then click in the little triangle/arrow of the **message** item to show the summary result (that variable will be filled automatically after the API REST call). Drag and Drop the **summary** result to the first line on the right marked as 1. Then click in the **Save** buton to return to the Action Chain editor.
+  
+![](./images/vbs-app-evenactions-33.gif)
+
+Now you must to do the same for the **Message** property, but you have to put the status variable this time. Click in the fx icon of the Message property to open the Expresion Editor.
+  
+![](./images/vbs-app-evenactions-34.png)
+  
+Then click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the status result to the first line on the right marked as 1. Then click in the **Save** buton to return to the Action Chain editor.
+  
+![](./images/vbs-app-evenactions-35.gif)
+  
+Next change tthe **Display Mode** property to *transient*.
+  
+![](./images/vbs-app-evenactions-36.png)
+  
+Next change tthe **Notification Type** property to *confirmation*.
+
+![](./images/vbs-app-evenactions-37.png)
+  
+To finish the *Action Chain* workflow you should add several **Return** actions to avoid issues.
+  
+Drag and Drop a **Return** Login action below the last *Fire Notification* action created.
+  
+![](./images/vbs-app-evenactions-38.gif)
+  
+Then you should assign a value in the return payload (as a best practice you should return a value after an action chain workflow, but it's optional, for academical reason you'll put a value in the payload property).
+  
+Click in the **Assign** link of the *Payload* proerty.
+  
+![](./images/vbs-app-evenactions-39.png)
+  
+Then click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Then click in the little triangle/arrow of the **message** item to show the **summary** result (that variable will be filled automatically after the API REST call). Drag and Drop the **summary** result to the **payload** Target. Then click in the **Save** buton to return to the Action Chain editor.
+  
+![](./images/vbs-app-evenactions-40.gif)
+   
+You must do the same for the failure *Fire Notification^* actions. Drag and Drop a **Return** Login action below each failure *Fire Notification* actions created. 
+  
+![](./images/vbs-app-evenactions-41.gif)
+
+Click in the *Call REST* failure **Fire Notification** action. Then in the **Message** property assign the status result variable as you did in the success notification. Click in the *fx* icon to open the Expresion Editor.
+  
+![](./images/vbs-app-evenactions-42.png)  
+
+Then click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the **status** result to the first line on the right marked as 1. Then click in the **Save** buton to return to the Action Chain editor.
+
+![](./images/vbs-app-evenactions-43.gif)
+  
+Next click in the **Return** action below to change the **Outcome** value from success to failure.
+  
+![](./images/vbs-app-evenactions-44.png)
+  
+Then click the **Assign** link of the *Payload* property to access the Assign Parameters editor.
+  
+![](./images/vbs-app-evenactions-45.png)
+  
+In the Assign PArameter Editor window. Click in the little triangel/arrow of the Source Results **callRestPutNNamespace... ** item. Drag and Drop the **error** result to the **payload** Target. Then click in the **Save** buton to return to the Action Chain editor.
+  
+![](./images/vbs-app-evenactions-46.gif)
+  
 
   
   </details>
