@@ -409,13 +409,13 @@ The app will ask your user name and password every time you access it. To allow 
   
 ![](./images/vbs-app-servicecon-09.png)
   
-Next click in the *Request* tab to configure the PUT Request as described in the [Object Storage API REST upoload multipart file manual](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/MultipartUpload/UploadPart). You'll configure the PUT Request to upload a multipart file to the Object Storage Bucket in the next steps.
+Next click in the *Request* tab to configure the PUT Request as described in the [Object Storage API REST Put Object/upload manual](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/Object/PutObject). You'll configure the PUT Request to upload a multipart file to the Object Storage Bucket in the next steps.
   
 ![](./images/vbs-app-servicecon-10.png)
   
-To complete the PUT Request, you must add next values to the end of the *URL* field (according to the API REST definition for *UploadPart*).
+To complete the PUT Request, you must add next values to the end of the *URL* field (according to the API REST definition for *PutObject*).
 ```
-  n/{namespaceName}/b/{bucketName}/u/{objectName}
+  n/{namespaceName}/b/{bucketName}/o/{objectName}
 ```
 When you add this values you should see three new Parameters in the window, one for each value. All of them must be required and *String* type. You could use whichever default values you want, as they will be change in an Action call in the mobile app. For example
   
@@ -633,13 +633,13 @@ Click in the **Assign** link of the *Input Parameters* Endpoint property to open
   
 ![](./images/vbs-app-evenactions-27.png)
   
-You must to assign values to the Target *uriParams*. Click in each Target parameter to assign values in the below editor.
+You must to assign values to the Target *uriParams*. Click in each Target parameter to assign values in the below editor. Check the editor type (at the right of the writting part) for each value, because it could be *Static Content* and *Expression*.
 
-|Param|Value|
-|--|--|
-|buckerName|your Object Storage Bucket name|
-|namespaceName|your Object Storage Tenancy namespace|
-|objectName| $page.variables.userName + "-" + $page.variables.photoName + "-" + $variables.files[0].name|
+|Param|Value|Type|
+|--|--|--|
+|buckerName|your Object Storage Bucket name|Static Content|
+|namespaceName|your Object Storage Tenancy namespace|Static Content|
+|objectName| $page.variables.userName + "-" + $page.variables.photoName + "-" + $variables.files[0].name|Expression|
   
 You can click in the *uriParam* parameter to review your values. You should see an object in JSON notation. 
 
@@ -647,7 +647,7 @@ Next click **Save** button to return to the *Actions Chain* editor.
   
 ![](./images/vbs-app-evenactions-28.png)
   
-Now the *Input Paramters* should be showed as mapped. But you have to send the photo file too. You can read in the [API description](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/MultipartUpload/UploadPart) that in the **uploadPart** call you must add the image file (as binary String) in the body of the call. Let's map the photo file to the body parameter.
+Now the *Input Paramters* should be showed as mapped. But you have to send the photo file too. You can read in the [API description](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/Object/PutObject) that in the **PutObject** call you must add the image file (as binary String) in the body of the call. Let's map the photo file to the body parameter.
   
 Click in the **Assign** link of the *Parameters* property to access to the Assign Parameters Editor.
   
