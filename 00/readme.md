@@ -736,6 +736,70 @@ Change the last Return logic action **Outcome** to *failure* value. In this acti
 After following all the steps, You should have an **Action Chain** workflow similar to the next screenshot.
   
 ![](./images/vbs-app-evenactions-48.png)
+</details>
   
-  </details>
+<details>
+  <summary>4. Test your mobile application (click to show)</summary>
+
+--- 
+Once you have configured the mobile application in Oracle Visual Builder with the functionality that you want it to present to end users, plus the REST service connections to Oracle Content and Experience, you build it so that you can test it on a device or distribute it to end users. Oracle Visual Builder can build the following types of applications from the same mobile application source code:
+
+* Android application
+* iOS application
+* Progressive web application (PWA)
+  
+For Android and iOS applications, you must define a build configuration before Oracle Visual Builder can build the mobile application for you (out of the scope of this worksho. You have more information about deploying native mobile application [here](https://docs.oracle.com/en/solutions/visual-builder-application-photos-to-content-experience-cloud/publish-mobile-application-oracle-visual-builder-vbcec1.html#GUID-6C813F64-6C74-4B50-9451-BC5CEC730122)). For a PWA, you must enable PWA in the PWA tab of the mobile app's Settings page. Once you complete the appropriate prerequisites, Oracle Visual Builder builds the mobile application you want.
+  
+When a mobile app with PWA support enabled is deployed using Oracle Visual Builder, the application runs as a web app and not as a native mobile app. End users access the app by navigating to the URL where the application is published.
+  
+Visual Builder has it own environment to deploy and test your PWA mobile application. With Visual Builder you can test your mobile application reading a QR image that will open the mobile web app in your mobile phone. Once tested you can publish it, in a simple way, to a Visual Builder production environment.
+  
+In this section you'll test your PWA mobile application in your own mobile phone (if you have one of course).
+---
+
+### Test your mobile application
+To deploy a PWA application you must enable the PWA option in your mobile application Settings.
+
+  Click **Mobile Apps** icon on the top left menu. Then select your mobile **app name** in the app tree. Next click **Settings** tab in the main top menu of your app tab. 
+   
+![](./images/vbs-app-test-01.png) 
+  
+Select **PWA** tab and Enable it if it's disabled.
+  
+![](./images/vbs-app-test-02.gif) 
+  
+In the PWA settings you could change several values like the name for the application, write a description and change the color theme. You could upload resource files too, but you don't have to change anything for the workshop, leave it as default.
+  
+Select **Security** Tab to change the access to the PWA mobile app. Then check **Allow anonymous access** to allow using the app without any user and password requirement.
+  
+![](./images/vbs-app-test-03.png) 
+  
+Click in the **main-start** tab or select it from the application tree, to return to the **Page Designer**.
+  
+![](./images/vbs-app-test-03.png)
+  
+In the Page Editor you have 3 buttons: Live, Design, Code over the phone layout. This tree buttons have different behaviours. You was using the **Design** button to enable the design editor to build the mobile app layout. **Code** button show you the html code of the layout designed. And the **Live** button let you test the mobile application in real time, but in your web browser instead of your mobile phone.
+  
+You can test your mobile app clicking in **Live**, but the idea is to test the application in your mobile phone. Click in the Play/Triangle icon in the Top main window, near the **Publish** button.
+  
+![](./images/vbs-app-test-04.png)
+  
+A new brouser tab or window should be opened (review your security settings about open new windows or tab in your browser if a new windows was not opened).
+  
+![](./images/vbs-app-test-05.png)
+  
+Click in **Build my App** button to build your mobile application and create the QR to test it in your own mobile phone. Then click in the **Share** button to deploy the mobile app and create the QR code.
+  
+![](./images/vbs-app-test-06.gif)
+  
+It'll take several seconds, less than a minute normally. You should receive a confirmation message at the right bottom of the window. Sometimes the QR code is not visible.  
+  
+![](./images/vbs-app-test-07.png)
+ 
+But if you refresh the browser (F5) you should see the QR code correctly.
+  
+
+  
+</details>
+  
 </details>
