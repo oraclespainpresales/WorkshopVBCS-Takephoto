@@ -814,7 +814,7 @@ Next read the QR code with you mobile phone to access to the application.
   
 ![](./images/vbs-app-test-10.gif)
   
-Finally test the application writing your name, a name for the photo and take a funny photo to upload to the Object Storage bucket.
+Finally test the application writing your name, a name for the photo and take a funny photo to upload to the Object Storage bucket. Open your Object Storage bucket to see your uploaded photo file or **Refresh** (in *More Actions*) the bucket if you have the bucket opened.
   
 ![](./images/vbs-app-test-11.gif)
   
