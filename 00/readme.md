@@ -737,7 +737,9 @@ After following all the steps, You should have an **Action Chain** workflow simi
   
 ![](./images/vbs-app-evenactions-48.png)
 </details>
-  
+    
+</details>
+
 <details>
   <summary>4. Test your mobile application (click to show)</summary>
 
@@ -799,7 +801,5 @@ It'll take several seconds, less than a minute normally. You should receive a co
 But if you refresh the browser (F5) you should see the QR code correctly.
   
 
-  
-</details>
   
 </details>
