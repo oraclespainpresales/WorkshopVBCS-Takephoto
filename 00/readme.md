@@ -786,28 +786,36 @@ Select **Security** Tab to change the access to the PWA mobile app. Then check *
   
 Click in the **main-start** tab or select it from the application tree, to return to the **Page Designer**.
   
-![](./images/vbs-app-test-03.png)
+![](./images/vbs-app-test-04.png)
   
 In the Page Editor you have 3 buttons: Live, Design, Code over the phone layout. This tree buttons have different behaviours. You was using the **Design** button to enable the design editor to build the mobile app layout. **Code** button show you the html code of the layout designed. And the **Live** button let you test the mobile application in real time, but in your web browser instead of your mobile phone.
   
 You can test your mobile app clicking in **Live**, but the idea is to test the application in your mobile phone. Click in the Play/Triangle icon in the Top main window, near the **Publish** button.
   
-![](./images/vbs-app-test-04.png)
+![](./images/vbs-app-test-05.png)
   
 A new brouser tab or window should be opened (review your security settings about open new windows or tab in your browser if a new windows was not opened).
   
-![](./images/vbs-app-test-05.png)
+![](./images/vbs-app-test-06.png)
   
 Click in **Build my App** button to build your mobile application and create the QR to test it in your own mobile phone. Then click in the **Share** button to deploy the mobile app and create the QR code.
   
-![](./images/vbs-app-test-06.gif)
+![](./images/vbs-app-test-07.gif)
   
-It'll take several seconds, less than a minute normally. You should receive a confirmation message at the right bottom of the window. Sometimes the QR code is not visible.  
+Wait for a while. The build process takes several seconds, less than a minute normally. You should receive a confirmation message at the right bottom of the window. Sometimes the QR code is not visible.  
   
-![](./images/vbs-app-test-07.png)
+![](./images/vbs-app-test-08.png)
  
 But if you refresh the browser (F5) you should see the QR code correctly.
   
-![](./images/vbs-app-test-08.png)
+![](./images/vbs-app-test-09.png)
+  
+Next read the QR code with you mobile phone to access to the application.
+  
+![](./images/vbs-app-test-10.gif)
+  
+Finally test the application writing your name, a name for the photo and take a funny photo to upload to the Object Storage bucket.
+  
+![](./images/vbs-app-test-11.gif)
   
 </details>
