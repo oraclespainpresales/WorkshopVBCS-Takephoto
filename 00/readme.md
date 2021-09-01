@@ -641,7 +641,15 @@ You must to assign values to the Target *uriParams*. Click in each Target parame
 |namespaceName|your Object Storage Tenancy namespace|Static Content|
 |objectName| $page.variables.userName + "-" + $page.variables.photoName + "-" + $variables.files[0].name|Expression|
   
-You can click in the *uriParam* parameter to review your values. You should see an object in JSON notation. 
+You can click in the *uriParam* parameter to review your values. You should see an object in JSON notation.
+  
+```json
+{
+ "bucketName": "your_backet_name",
+ "namespaceName": "your_object_storage_namespace",
+ "objectName": "{{ $page.variables.userName + \"-\" + $page.variables.photoName + \"-\" + $variables.files[0].name }}"
+}
+```
 
 Next click **Save** button to return to the *Actions Chain* editor.
   
@@ -800,6 +808,6 @@ It'll take several seconds, less than a minute normally. You should receive a co
  
 But if you refresh the browser (F5) you should see the QR code correctly.
   
-
+![](./images/vbs-app-test-08.png)
   
 </details>
