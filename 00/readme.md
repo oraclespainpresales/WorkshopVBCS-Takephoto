@@ -184,7 +184,7 @@ Next you have to add a **Grid Container** component from *Layout* menu, nested t
   
 ![](./images/vbs-app-15.png)
   
-Now you have to add a **Camera** Component from *Commom* menu, nested to the Grid Row that you create in the last step.
+Now you have to add a **Camera** Component from *Common* menu, nested to the Grid Row that you create in the last step.
 > Note: The Camera component is made up of three components: a **File Picker** and a **Button** with an **Icon**. The File Picker component will have a special behaviour as the action that it will execute, will be triggered by the button instead of the own File Picker component.
   
 ![](./images/vbs-app-16.gif)
