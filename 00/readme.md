@@ -121,7 +121,11 @@ You can create web applications as well as mobile applications in Visual Builder
 ### Creating the mobile layout.
 Now you will create the mobile layout adding several components that you will use and combine in future sections to create the mobile application.
   
-Click in the mobile left menu icon and then click **+ Mobile Application** button to create a mobile application.
+First name your app MyMobilePhotoUpload_UserXX. As a decription copy past the following text : "Low Code Mobile App to Upload Photos to OCI Storage"
+  
+  ![](./images/vbs-app-01-fer.png)
+  
+Now, click in the mobile left menu icon and then click **+ Mobile Application** button to create a mobile application.
   
 ![](./images/vbs-app-01.png)
   
