@@ -293,7 +293,7 @@ Repeat the last step with the **Photo Name** component.
   
 ![](./images/vbs-app-visibility-07.gif)
   
-Now you have linked the variables with the components values and you will can use them in several parts of your mobile application. For example you will use them in the next steps to modify the visibility of the Camera and Image components.
+Now you have linked the variables with the components values and you will use them in several parts of your mobile application. For example you will use them in the next steps to modify the visibility of the Camera and Image components.
   
 To modify the visibility you have to use the **Bind-If** components. Click in the **Structure** tree and select the first *Bind-If*. As you can see in the *Properties*, there is a Test field with **[[true]]** value. This value means that the if value is always *true*. Let's change the value to modify the visibility dinamically. Then click in the **fx** icon to open the Expression Editor window.
   
