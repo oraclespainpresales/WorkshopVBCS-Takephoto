@@ -643,11 +643,11 @@ Click in the **Assign** link of the *Input Parameters* Endpoint property to open
   
 You must to assign values to the Target *uriParams*. Click in each Target parameter to assign values in the below editor. Check the editor type (at the right of the writting part) for each value, because it could be *Static Content* and *Expression*.
 
-|Param|Value|Type|
-|--|--|--|
-|buckerName|your Object Storage Bucket name|Static Content|
-|namespaceName|your Object Storage Tenancy namespace|Static Content|
-|objectName| $page.variables.userName + "-" + $page.variables.photoName + "-" + $variables.files[0].name|Expression|
+|Param|Value|Type||
+|--|--|--|--|
+|buckerName|your Object Storage Bucket name|Static Content|[OS namespace in OCI](https://github.com/oraclespainpresales/WorkshopVBCS-Takephoto/blob/main/00/how%20to%20get%20Object%20Storage%20Namespace.md)|
+|namespaceName|your Object Storage Tenancy namespace|Static Content|[how to create a bucket in OCI](https://github.com/oraclespainpresales/WorkshopVBCS-Takephoto/blob/main/00/how%20to%20get%20Object%20Storage%20Namespace.md)|
+|objectName| $page.variables.userName + "-" + $page.variables.photoName + "-" + $variables.files[0].name|Expression||
   
 You can click in the *uriParam* parameter to review your values. You should see an object in JSON notation.
   
