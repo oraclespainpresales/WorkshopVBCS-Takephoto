@@ -145,7 +145,7 @@ Now you should have created the visual builder mobile application environtment/s
   
 ![](./images/vbs-app-04.png)
   
-You can change the mobile appearance (iphone, google pixel, samsung or tablet), show or hide the bezel or change the mobiile size. In the tutorial we select Samsung Galaxy S20 layout, but you can select whatever you want (default layout is for iphone mobile phones).
+You can change the mobile appearance (iphone, google pixel, samsung or tablet), show or hide the bezel or change the mobile size. In the tutorial we select Samsung Galaxy S20 layout, but you can select whatever you want (default layout is for iphone mobile phones).
   
 ![](./images/vbs-app-05.png)
   
