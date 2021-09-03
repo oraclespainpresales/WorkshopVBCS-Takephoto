@@ -263,7 +263,7 @@ You can use a **bind-if** component to conditionally show or hide UI components 
 ---
   
 ### Manage Component Visibility Using Conditions and Variables
-Before the **Bind-If** configuration, you'll have to create several variables to store the *Input Text* value. Let's create the variables and then you'll can create the rules to control de visibility of the components.
+Before the **Bind-If** configuration, you'll have to create several variables to store the *Input Text* value. Let's create the variables and then you can create the rules to control de visibility of the components.
   
 Click **Variables** in the main-start tab to get access to the variables configuration window. You shouldn't have any variable created yet. Click **+ Variable** to create the first variable for you main-start page.
   
