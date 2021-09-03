@@ -66,11 +66,15 @@ You should have a new API key created and you should see the Fingerprint key in 
 
 ![](./images/oci-apikey-09.png)
 
-You can get the Config file that you copied before clicking in the *tree vertical* dots in the Fingerprint row and select **View Config File**.
+You have access to the Config file that you copied before to your desktop by clicking in the *tree vertical* dots in the Fingerprint row and select **View Config File**.
 
 ![](./images/oci-apikey-10.png)
+
+ And thats it. Congratulations. You successfully generated your API keys.
+
 </details>
 <details>
+  
   <summary>2.- Acessing Visual Builder Studio and WorkSpace using Visual Builder Cloud Service (click to show)</summary>
   
 ---
