@@ -243,7 +243,7 @@ Now click in the *Camera* component and in the General tab uncheck **Video** che
 
 ![](./images/vbs-app-config-04.png)
   
-Then click in the *Button* component inside the Camera one. Change the Text field deleting the **/Video** part. Then Select **Call to Action** in the Choming field and check *Full width* in Styling. 
+Then click in the *Button* component inside the Camera one. Change the Text field deleting the **/Video** part. Then Select **Call to Action** in the Chroming field and check *Full width* in Styling. 
   
 |Field|Value|  
 |-|-|
