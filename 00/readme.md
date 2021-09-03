@@ -62,7 +62,7 @@ Next window is the summary or **Configuration File Preview**. Click in the **cop
 
 ![](./images/oci-apikey-08.png)
 
-You might have a new API key created and you should see the Fingerprint key in the OCI web console. 
+You should have a new API key created and you should see the Fingerprint key in the OCI web console. 
 
 ![](./images/oci-apikey-09.png)
 
