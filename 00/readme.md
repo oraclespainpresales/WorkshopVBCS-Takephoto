@@ -58,7 +58,7 @@ Then click in **Add** button.
 
 ![](./images/oci-apikey-07.png)
 
-Next window is the summary or **Configuration File Preview**. Click in the **copy** link to copy your OCI API credentials to a text file in you local computer as you will need them in future steps in the workshop. Then click **Close** Button to finish the process.
+Next window is the summary or **Configuration File Preview**. Click in the **copy** link to copy your OCI API credentials to a text file in your local computer as you will need them in future steps in the workshop. Then click **Close** Button to finish the process.
 
 ![](./images/oci-apikey-08.png)
 
