@@ -645,8 +645,8 @@ You must to assign values to the Target *uriParams*. Click in each Target parame
 
 |Param|Value|Type||
 |--|--|--|--|
-|buckerName|your Object Storage Bucket name|Static Content|[OS namespace in OCI](https://github.com/oraclespainpresales/WorkshopVBCS-Takephoto/blob/main/00/how%20to%20get%20Object%20Storage%20Namespace.md)|
-|namespaceName|your Object Storage Tenancy namespace|Static Content|[how to create a bucket in OCI](https://github.com/oraclespainpresales/WorkshopVBCS-Takephoto/blob/main/00/how%20to%20create%20Object%20Storage%20Bucket.md)|
+|buckerName|your Object Storage Bucket name|Static Content|[how to create a bucket in OCI](https://github.com/oraclespainpresales/WorkshopVBCS-Takephoto/blob/main/00/how%20to%20create%20Object%20Storage%20Bucket.md)|
+|namespaceName|your Object Storage Tenancy namespace|Static Content|[OS namespace in OCI](https://github.com/oraclespainpresales/WorkshopVBCS-Takephoto/blob/main/00/how%20to%20get%20Object%20Storage%20Namespace.md)|
 |objectName| $page.variables.userName + "-" + $page.variables.photoName + "-" + $variables.files[0].name|Expression||
   
 You can click in the *uriParam* parameter to review your values. You should see an object in JSON notation.
