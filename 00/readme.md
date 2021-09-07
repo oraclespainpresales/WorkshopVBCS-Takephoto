@@ -123,7 +123,7 @@ You can create web applications as well as mobile applications in Visual Builder
   <summary>3.1 Creating the mobile layout (click to show)</summary>
   
 ### Creating the mobile layout.
-Now you will create the mobile layout adding several components that you will use and combine in future sections to create the mobile application. Click in the mobile left menu icon and then click **+ Mobile Application** button to create a mobile application.
+Now you will create the mobile layout adding several components that you will use and combine in future sections to create the mobile application. Click in the **mobile icon** in the top left menu and then click **+ Mobile Application** button to create a mobile application.
   
 ![](./images/vbs-app-01.png)
   
