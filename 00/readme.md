@@ -258,7 +258,7 @@ Click in the *Image* component and put in the **Width** field the first number o
   
 You can use a **bind-if** component to conditionally show or hide UI components in your visual application. Use **bind-if** to surround other components and set conditions to determine whether the components should be displayed on a page. In this lab you'll configure two **bind-if** components, one for each *Input Text* value. To manage the value of the **Input Text** components you'll have to create variables. These variables will be used in the events and actions to those events in future steps.
   
-> Note: For academic reasons and to facilitate the creation of the mobile UI, the **bind-if** components were created before adding the components affected by them. To use an **bind-if** component to control when a component is displayed in a page after you added it: In **Design** mode, locate the component that you want to control dynamically. *Right-click* the component on the canvas or in the *Structure* view and select **Surround > If** in the popup menu. 
+> Note: TENGO DUDAS SI MERECE LA PENA MANTENER ESTA NOTA SI NO LA VAMOS USAR.....For academic reasons and to facilitate the creation of the mobile UI, the **bind-if** components were created before adding the components affected by them. To use an **bind-if** component to control when a component is displayed in a page after you added it: In **Design** mode, locate the component that you want to control dynamically. *Right-click* the component on the canvas or in the *Structure* view and select **Surround > If** in the popup menu. 
   
 ![](./images/vbs-app-surround-01.png)  
   
